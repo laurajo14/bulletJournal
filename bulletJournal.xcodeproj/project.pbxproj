@@ -12,6 +12,20 @@
 		D32A1ADF1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D32A1ADD1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld */; };
 		D32A1AE11FD5E05100F1C6C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D32A1AE01FD5E05100F1C6C7 /* Assets.xcassets */; };
 		D32A1AE41FD5E05100F1C6C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32A1AE21FD5E05100F1C6C7 /* LaunchScreen.storyboard */; };
+		D32A1AED1FD5EE0900F1C6C7 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AEC1FD5EE0900F1C6C7 /* DailyViewController.swift */; };
+		D32A1AF11FD5EE7A00F1C6C7 /* WeekMain1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AF01FD5EE7A00F1C6C7 /* WeekMain1ViewController.swift */; };
+		D32A1AF31FD5EED000F1C6C7 /* WeekReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AF21FD5EED000F1C6C7 /* WeekReviewViewController.swift */; };
+		D32A1AF51FD5EF3600F1C6C7 /* WeekJournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AF41FD5EF3600F1C6C7 /* WeekJournalEntryViewController.swift */; };
+		D32A1AF71FD5F00500F1C6C7 /* MonthMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AF61FD5F00500F1C6C7 /* MonthMainViewController.swift */; };
+		D32A1AF91FD5F02B00F1C6C7 /* MonthReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AF81FD5F02B00F1C6C7 /* MonthReviewViewController.swift */; };
+		D32A1AFB1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AFA1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift */; };
+		D32A1AFD1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AFC1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift */; };
+		D32A1AFF1FD5F10000F1C6C7 /* YearResolvesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AFE1FD5F10000F1C6C7 /* YearResolvesViewController.swift */; };
+		D32A1B011FD5F12100F1C6C7 /* YearReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1B001FD5F12100F1C6C7 /* YearReviewViewController.swift */; };
+		D32A1B031FD5F16100F1C6C7 /* MasterIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1B021FD5F16100F1C6C7 /* MasterIndexViewController.swift */; };
+		D32A1B051FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1B041FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift */; };
+		D3A41B791FD60E98006C2E3E /* WeekPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A41B781FD60E98006C2E3E /* WeekPageViewController.swift */; };
+		D3A41B7E1FD60F78006C2E3E /* WeekMain2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A41B7D1FD60F78006C2E3E /* WeekMain2ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +36,20 @@
 		D32A1AE01FD5E05100F1C6C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D32A1AE31FD5E05100F1C6C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D32A1AE51FD5E05100F1C6C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D32A1AEC1FD5EE0900F1C6C7 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		D32A1AF01FD5EE7A00F1C6C7 /* WeekMain1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekMain1ViewController.swift; sourceTree = "<group>"; };
+		D32A1AF21FD5EED000F1C6C7 /* WeekReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekReviewViewController.swift; sourceTree = "<group>"; };
+		D32A1AF41FD5EF3600F1C6C7 /* WeekJournalEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeekJournalEntryViewController.swift; path = bulletJournal/ViewControllers/Weekly/WeekJournalEntryViewController.swift; sourceTree = SOURCE_ROOT; };
+		D32A1AF61FD5F00500F1C6C7 /* MonthMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMainViewController.swift; sourceTree = "<group>"; };
+		D32A1AF81FD5F02B00F1C6C7 /* MonthReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthReviewViewController.swift; sourceTree = "<group>"; };
+		D32A1AFA1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthJournalEntryViewController.swift; sourceTree = "<group>"; };
+		D32A1AFC1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthIndexViewController.swift; sourceTree = "<group>"; };
+		D32A1AFE1FD5F10000F1C6C7 /* YearResolvesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearResolvesViewController.swift; sourceTree = "<group>"; };
+		D32A1B001FD5F12100F1C6C7 /* YearReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearReviewViewController.swift; sourceTree = "<group>"; };
+		D32A1B021FD5F16100F1C6C7 /* MasterIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterIndexViewController.swift; sourceTree = "<group>"; };
+		D32A1B041FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearJournalEntryViewController.swift; sourceTree = "<group>"; };
+		D3A41B781FD60E98006C2E3E /* WeekPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPageViewController.swift; sourceTree = "<group>"; };
+		D3A41B7D1FD60F78006C2E3E /* WeekMain2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekMain2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +82,8 @@
 		D32A1AD51FD5E05100F1C6C7 /* bulletJournal */ = {
 			isa = PBXGroup;
 			children = (
-				D32A1ADA1FD5E05100F1C6C7 /* Main.storyboard */,
+				D32A1AEF1FD5EE2200F1C6C7 /* Storyboards */,
+				D32A1AEE1FD5EE1400F1C6C7 /* ViewControllers */,
 				D32A1AE21FD5E05100F1C6C7 /* LaunchScreen.storyboard */,
 				D32A1AEB1FD5ED4A00F1C6C7 /* Resources */,
 			);
@@ -70,6 +99,59 @@
 				D32A1ADD1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D32A1AEE1FD5EE1400F1C6C7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3A41B7C1FD60EEE006C2E3E /* Yearly */,
+				D3A41B7B1FD60EE2006C2E3E /* Monthly */,
+				D3A41B7A1FD60EC7006C2E3E /* Weekly */,
+				D32A1AEC1FD5EE0900F1C6C7 /* DailyViewController.swift */,
+				D32A1B021FD5F16100F1C6C7 /* MasterIndexViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D32A1AEF1FD5EE2200F1C6C7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D32A1ADA1FD5E05100F1C6C7 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D3A41B7A1FD60EC7006C2E3E /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+				D3A41B781FD60E98006C2E3E /* WeekPageViewController.swift */,
+				D32A1AF41FD5EF3600F1C6C7 /* WeekJournalEntryViewController.swift */,
+				D32A1AF21FD5EED000F1C6C7 /* WeekReviewViewController.swift */,
+				D32A1AF01FD5EE7A00F1C6C7 /* WeekMain1ViewController.swift */,
+				D3A41B7D1FD60F78006C2E3E /* WeekMain2ViewController.swift */,
+			);
+			path = Weekly;
+			sourceTree = "<group>";
+		};
+		D3A41B7B1FD60EE2006C2E3E /* Monthly */ = {
+			isa = PBXGroup;
+			children = (
+				D32A1AFC1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift */,
+				D32A1AFA1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift */,
+				D32A1AF81FD5F02B00F1C6C7 /* MonthReviewViewController.swift */,
+				D32A1AF61FD5F00500F1C6C7 /* MonthMainViewController.swift */,
+			);
+			path = Monthly;
+			sourceTree = "<group>";
+		};
+		D3A41B7C1FD60EEE006C2E3E /* Yearly */ = {
+			isa = PBXGroup;
+			children = (
+				D32A1B041FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift */,
+				D32A1B001FD5F12100F1C6C7 /* YearReviewViewController.swift */,
+				D32A1AFE1FD5F10000F1C6C7 /* YearResolvesViewController.swift */,
+			);
+			path = Yearly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +226,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32A1AFF1FD5F10000F1C6C7 /* YearResolvesViewController.swift in Sources */,
+				D32A1AF31FD5EED000F1C6C7 /* WeekReviewViewController.swift in Sources */,
+				D32A1B051FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift in Sources */,
+				D32A1AF91FD5F02B00F1C6C7 /* MonthReviewViewController.swift in Sources */,
+				D32A1AFD1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift in Sources */,
 				D32A1ADF1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld in Sources */,
 				D32A1AD71FD5E05100F1C6C7 /* AppDelegate.swift in Sources */,
+				D32A1AED1FD5EE0900F1C6C7 /* DailyViewController.swift in Sources */,
+				D32A1B031FD5F16100F1C6C7 /* MasterIndexViewController.swift in Sources */,
+				D32A1B011FD5F12100F1C6C7 /* YearReviewViewController.swift in Sources */,
+				D3A41B7E1FD60F78006C2E3E /* WeekMain2ViewController.swift in Sources */,
+				D32A1AF11FD5EE7A00F1C6C7 /* WeekMain1ViewController.swift in Sources */,
+				D32A1AF71FD5F00500F1C6C7 /* MonthMainViewController.swift in Sources */,
+				D32A1AF51FD5EF3600F1C6C7 /* WeekJournalEntryViewController.swift in Sources */,
+				D32A1AFB1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift in Sources */,
+				D3A41B791FD60E98006C2E3E /* WeekPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
