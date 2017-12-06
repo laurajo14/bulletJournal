@@ -8,17 +8,56 @@
 
 import UIKit
 
+
+protocol bulletTableViewCellDelegate: class {
+//    func bulletTableViewCellCompleteButtonTapped(_ cell: ItemTableViewCell)
+}
+
+
 class bulletTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    //MARK: - Outlets
+    @IBOutlet weak var bulletButton: UIButton!
+    @IBOutlet weak var noteTextView: UITextView!
+    
+    //MARK: - Actions
+    
+    
+    //MARK: - Properties
+    //    var bulletTypes = ["●", "x", ">>"]
+    //    var bulletTypes = ["1", "2", "3"]
+
+    var thoughtEntry: ThoughtEntry? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    weak var delegate: bulletTableViewCellDelegate?
+    
+    //Actions
+    func updateViews(){
+        guard let thoughtEntry = thoughtEntry else { return }
+        noteTextView.text = thoughtEntry.name
+        bulletButton.titleLabel?.text = "-"
     }
+    
+    
+    
+    
+    
+///>>setting task bullet status as normal, complete, or migrate
+//        if taskEntry.normalStatus == true {
+//            statusButton.setImage(#imageLiteral(resourceName: "complete"), for: .normal)
+//        } else if {
+//            statusButton.setImage(#imageLiteral(resourceName: "incomplete"), for: .normal)
+//        } else {
+//
+//        }
 
+///if the status button is migrated, set up an alert to ask what date to move the task to
+//    @IBAction func isCompleteButtonTapped(_ sender: Any) {
+//        delegate?.itemTableViewCellCompleteButtonTapped(self)
+//    }
+    
 }

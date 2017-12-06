@@ -10,6 +10,15 @@ import UIKit
 
 class WeekJournalEntryViewController: UIViewController {
 
+    //MARK: OUTLETS & ACTIONS
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var pageController: UIPageControl!
+    
+    
+    @IBAction func pageControllerSwiped(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

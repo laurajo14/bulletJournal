@@ -8,14 +8,10 @@
 
 import UIKit
 
-class EventTableViewCell: UITableViewCell {
+class eventTableViewCell: UITableViewCell {
 
-    
     //MARK: - Outlets
-    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var scheduledEventTextField: UITextField!
-    
-    //MARK: Functions
 
 }
