@@ -1,5 +1,5 @@
 //
-//  WeekMainViewController.swift
+//  WeekMain1ViewController.swift
 //  bulletJournal
 //
 //  Created by Laura O'Brien on 12/4/17.
@@ -8,19 +8,45 @@
 
 import UIKit
 
-class WeekMainViewController: UIViewController {
+class WeekMain1ViewController: UIViewController {
+    
+    //MARK: - Outlets
+    @IBOutlet weak var sideMenuWidthConstraint: NSLayoutConstraint!
+    
+    //MARK: - Properties
+    var isSlideMenuHidden = true
 
+    //MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //    sideMenuConstraint.constant = -180
+        sideMenuWidthConstraint.constant = 0
     }
     
+    override func viewDidDisappear(_ animated: Bool){
+        super.viewDidDisappear(false)
+        sideMenuWidthConstraint.constant = 0
+    }
+
+    
+    //MARK: - Actions
+    @IBAction func menuButtonTapped(_ sender: UIBarButtonItem) {
+        if isSlideMenuHidden {
+  //          sideMenuConstraint.constant = 0
+            sideMenuWidthConstraint.constant = 180
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        } else {
+//            sideMenuConstraint.constant = -180
+            sideMenuWidthConstraint.constant = 0
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        isSlideMenuHidden = !isSlideMenuHidden
+    }
 
     /*
     // MARK: - Navigation

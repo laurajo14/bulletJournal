@@ -1,5 +1,5 @@
 //
-//  bulletTableViewCell.swift
+//  BulletTableViewCell.swift
 //  bulletJournal
 //
 //  Created by Laura O'Brien on 12/5/17.
@@ -8,13 +8,10 @@
 
 import UIKit
 
-
-protocol bulletTableViewCellDelegate: class {
-//    func bulletTableViewCellCompleteButtonTapped(_ cell: ItemTableViewCell)
+protocol BulletTableViewCellDelegate: class {    
 }
 
-
-class bulletTableViewCell: UITableViewCell {
+class BulletTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
     @IBOutlet weak var bulletButton: UIButton!
@@ -29,17 +26,32 @@ class bulletTableViewCell: UITableViewCell {
 
     var thoughtEntry: ThoughtEntry? {
         didSet {
-            updateViews()
+            updateThoughtEntryViews()
         }
     }
     
-    weak var delegate: bulletTableViewCellDelegate?
+    var eventEntry: EventEntry? {
+        didSet {
+            updateEventEntryViews()
+        }
+    }
+    
+    var taskEntry: TaskEntry?
+    
+    
+    weak var delegate: BulletTableViewCellDelegate?
     
     //Actions
-    func updateViews(){
+    func updateThoughtEntryViews(){
         guard let thoughtEntry = thoughtEntry else { return }
         noteTextView.text = thoughtEntry.name
         bulletButton.titleLabel?.text = "-"
+    }
+    
+    func updateEventEntryViews(){
+        guard let eventEntry = eventEntry else { return }
+        noteTextView.text = eventEntry.name
+        bulletButton.titleLabel?.text = "○"
     }
     
     

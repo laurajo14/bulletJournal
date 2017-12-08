@@ -10,17 +10,38 @@ import UIKit
 
 class WeekMain2ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: - Properties
+    var isSlideMenuHidden = true
+    
+    //MARK: - Outlets
+    @IBOutlet weak var sideMenuWidthConstraint: NSLayoutConstraint!
+    
+    //MARK: - Actions
+    @IBAction func menuButtonTapped(_ sender: UIBarButtonItem) {
+        if isSlideMenuHidden {
+            sideMenuWidthConstraint.constant = 180
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        } else {
+            sideMenuWidthConstraint.constant = 0
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        isSlideMenuHidden = !isSlideMenuHidden
     }
     
+    //View LifeCycles
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        sideMenuWidthConstraint.constant = 0
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(false)
+        sideMenuWidthConstraint.constant = 0
+    }
 
     /*
     // MARK: - Navigation
