@@ -1,14 +1,14 @@
 //
-//  MonthReviewViewController.swift
+//  MonthMainVisionViewController.swift
 //  bulletJournal
 //
-//  Created by Laura O'Brien on 12/4/17.
+//  Created by Laura O'Brien on 12/8/17.
 //  Copyright © 2017 Laura O'Brien. All rights reserved.
 //
 
 import UIKit
 
-class MonthReviewViewController: UIViewController {
+class MonthMainVisionViewController: UIViewController {
 
     //MARK: - Properties
     var isSlideMenuHidden = true
@@ -33,16 +33,16 @@ class MonthReviewViewController: UIViewController {
         isSlideMenuHidden = !isSlideMenuHidden
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenuWidthConstraint.constant = 0
     }
-
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(false)
         sideMenuWidthConstraint.constant = 0
     }
-    
 
     /*
     // MARK: - Navigation

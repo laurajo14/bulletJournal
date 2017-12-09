@@ -32,7 +32,7 @@ class WeekMain2ViewController: UIViewController {
         isSlideMenuHidden = !isSlideMenuHidden
     }
     
-    //View LifeCycles
+    //MARK: - View LifeCycles
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenuWidthConstraint.constant = 0

@@ -19,7 +19,7 @@
 		D32A1AF71FD5F00500F1C6C7 /* MonthMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AF61FD5F00500F1C6C7 /* MonthMainViewController.swift */; };
 		D32A1AF91FD5F02B00F1C6C7 /* MonthReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AF81FD5F02B00F1C6C7 /* MonthReviewViewController.swift */; };
 		D32A1AFB1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AFA1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift */; };
-		D32A1AFD1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AFC1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift */; };
+		D32A1AFD1FD5F0BF00F1C6C7 /* YearIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AFC1FD5F0BF00F1C6C7 /* YearIndexViewController.swift */; };
 		D32A1AFF1FD5F10000F1C6C7 /* YearResolvesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AFE1FD5F10000F1C6C7 /* YearResolvesViewController.swift */; };
 		D32A1B011FD5F12100F1C6C7 /* YearReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1B001FD5F12100F1C6C7 /* YearReviewViewController.swift */; };
 		D32A1B031FD5F16100F1C6C7 /* MasterIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1B021FD5F16100F1C6C7 /* MasterIndexViewController.swift */; };
@@ -27,8 +27,11 @@
 		D330865D1FDA11D40067C4E5 /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = D330865C1FDA11D40067C4E5 /* SegueFromLeft.swift */; };
 		D35B805F1FD74AE000EA79DE /* BulletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B805E1FD74AE000EA79DE /* BulletTableViewCell.swift */; };
 		D386A5DE1FD7282B0068FBCB /* DailyScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386A5DD1FD7282B0068FBCB /* DailyScheduleTableViewCell.swift */; };
+		D39759F21FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39759F11FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift */; };
+		D39759FF1FDB484B0076CFE4 /* YearlyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39759FE1FDB484B0076CFE4 /* YearlyPageViewController.swift */; };
 		D3A41B791FD60E98006C2E3E /* WeekPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A41B781FD60E98006C2E3E /* WeekPageViewController.swift */; };
 		D3A41B7E1FD60F78006C2E3E /* WeekMain2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A41B7D1FD60F78006C2E3E /* WeekMain2ViewController.swift */; };
+		D3AFE5BC1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE5BB1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift */; };
 		D3C0A2301FD9AEA200F93361 /* DailyScheduleEntry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry+Convenience.swift */; };
 		D3C0A2321FD9B0D800F93361 /* DailyScheduleEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0A2311FD9B0D800F93361 /* DailyScheduleEntryController.swift */; };
 		D3E87B541FD8579800A34688 /* ThoughtEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B531FD8579800A34688 /* ThoughtEntryController.swift */; };
@@ -38,6 +41,9 @@
 		D3E87B5C1FD8598C00A34688 /* TaskEntry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B5B1FD8598C00A34688 /* TaskEntry+Convenience.swift */; };
 		D3E87B5E1FD85A0E00A34688 /* EventEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B5D1FD85A0E00A34688 /* EventEntryController.swift */; };
 		D3E87B601FD85A1600A34688 /* TaskEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B5F1FD85A1600A34688 /* TaskEntryController.swift */; };
+		D3F7DA4C1FDAF4BE00ECE1ED /* MonthMainTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7DA4B1FDAF4BE00ECE1ED /* MonthMainTaskViewController.swift */; };
+		D3F7DA4E1FDAF4E400ECE1ED /* MonthMainVisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7DA4D1FDAF4E400ECE1ED /* MonthMainVisionViewController.swift */; };
+		D3F7DA501FDAF58100ECE1ED /* MonthlyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7DA4F1FDAF58100ECE1ED /* MonthlyPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +61,7 @@
 		D32A1AF61FD5F00500F1C6C7 /* MonthMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMainViewController.swift; sourceTree = "<group>"; };
 		D32A1AF81FD5F02B00F1C6C7 /* MonthReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthReviewViewController.swift; sourceTree = "<group>"; };
 		D32A1AFA1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthJournalEntryViewController.swift; sourceTree = "<group>"; };
-		D32A1AFC1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthIndexViewController.swift; sourceTree = "<group>"; };
+		D32A1AFC1FD5F0BF00F1C6C7 /* YearIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearIndexViewController.swift; sourceTree = "<group>"; };
 		D32A1AFE1FD5F10000F1C6C7 /* YearResolvesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearResolvesViewController.swift; sourceTree = "<group>"; };
 		D32A1B001FD5F12100F1C6C7 /* YearReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearReviewViewController.swift; sourceTree = "<group>"; };
 		D32A1B021FD5F16100F1C6C7 /* MasterIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterIndexViewController.swift; sourceTree = "<group>"; };
@@ -63,8 +69,11 @@
 		D330865C1FDA11D40067C4E5 /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
 		D35B805E1FD74AE000EA79DE /* BulletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTableViewCell.swift; sourceTree = "<group>"; };
 		D386A5DD1FD7282B0068FBCB /* DailyScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		D39759F11FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTaskTableViewCell.swift; sourceTree = "<group>"; };
+		D39759FE1FDB484B0076CFE4 /* YearlyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearlyPageViewController.swift; sourceTree = "<group>"; };
 		D3A41B781FD60E98006C2E3E /* WeekPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPageViewController.swift; sourceTree = "<group>"; };
 		D3A41B7D1FD60F78006C2E3E /* WeekMain2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekMain2ViewController.swift; sourceTree = "<group>"; };
+		D3AFE5BB1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyEventTableViewCell.swift; sourceTree = "<group>"; };
 		D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyScheduleEntry+Convenience.swift"; sourceTree = "<group>"; };
 		D3C0A2311FD9B0D800F93361 /* DailyScheduleEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleEntryController.swift; sourceTree = "<group>"; };
 		D3E87B531FD8579800A34688 /* ThoughtEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtEntryController.swift; sourceTree = "<group>"; };
@@ -74,6 +83,9 @@
 		D3E87B5B1FD8598C00A34688 /* TaskEntry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntry+Convenience.swift"; sourceTree = "<group>"; };
 		D3E87B5D1FD85A0E00A34688 /* EventEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntryController.swift; sourceTree = "<group>"; };
 		D3E87B5F1FD85A1600A34688 /* TaskEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEntryController.swift; sourceTree = "<group>"; };
+		D3F7DA4B1FDAF4BE00ECE1ED /* MonthMainTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMainTaskViewController.swift; sourceTree = "<group>"; };
+		D3F7DA4D1FDAF4E400ECE1ED /* MonthMainVisionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMainVisionViewController.swift; sourceTree = "<group>"; };
+		D3F7DA4F1FDAF58100ECE1ED /* MonthlyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +171,7 @@
 		D35B805C1FD74AB500EA79DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D3AFE5BA1FDAFB2A00B29232 /* Monthly */,
 				D35B805D1FD74AC200EA79DE /* Daily */,
 			);
 			path = Views;
@@ -196,10 +209,12 @@
 		D3A41B7B1FD60EE2006C2E3E /* Monthly */ = {
 			isa = PBXGroup;
 			children = (
-				D32A1AFC1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift */,
+				D3F7DA4F1FDAF58100ECE1ED /* MonthlyPageViewController.swift */,
 				D32A1AFA1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift */,
 				D32A1AF81FD5F02B00F1C6C7 /* MonthReviewViewController.swift */,
 				D32A1AF61FD5F00500F1C6C7 /* MonthMainViewController.swift */,
+				D3F7DA4B1FDAF4BE00ECE1ED /* MonthMainTaskViewController.swift */,
+				D3F7DA4D1FDAF4E400ECE1ED /* MonthMainVisionViewController.swift */,
 			);
 			path = Monthly;
 			sourceTree = "<group>";
@@ -207,11 +222,22 @@
 		D3A41B7C1FD60EEE006C2E3E /* Yearly */ = {
 			isa = PBXGroup;
 			children = (
+				D39759FE1FDB484B0076CFE4 /* YearlyPageViewController.swift */,
 				D32A1B041FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift */,
 				D32A1B001FD5F12100F1C6C7 /* YearReviewViewController.swift */,
 				D32A1AFE1FD5F10000F1C6C7 /* YearResolvesViewController.swift */,
+				D32A1AFC1FD5F0BF00F1C6C7 /* YearIndexViewController.swift */,
 			);
 			path = Yearly;
+			sourceTree = "<group>";
+		};
+		D3AFE5BA1FDAFB2A00B29232 /* Monthly */ = {
+			isa = PBXGroup;
+			children = (
+				D3AFE5BB1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift */,
+				D39759F11FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift */,
+			);
+			path = Monthly;
 			sourceTree = "<group>";
 		};
 		D3E87B511FD8576900A34688 /* Models */ = {
@@ -311,16 +337,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3C0A2321FD9B0D800F93361 /* DailyScheduleEntryController.swift in Sources */,
+				D39759FF1FDB484B0076CFE4 /* YearlyPageViewController.swift in Sources */,
 				D32A1AFF1FD5F10000F1C6C7 /* YearResolvesViewController.swift in Sources */,
+				D3F7DA4C1FDAF4BE00ECE1ED /* MonthMainTaskViewController.swift in Sources */,
 				D330865D1FDA11D40067C4E5 /* SegueFromLeft.swift in Sources */,
 				D32A1AF31FD5EED000F1C6C7 /* WeekReviewViewController.swift in Sources */,
 				D3E87B561FD857AF00A34688 /* ThoughtEntry+Convenience.swift in Sources */,
 				D3E87B601FD85A1600A34688 /* TaskEntryController.swift in Sources */,
 				D32A1B051FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift in Sources */,
+				D39759F21FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift in Sources */,
 				D3E87B5C1FD8598C00A34688 /* TaskEntry+Convenience.swift in Sources */,
 				D3E87B581FD8583200A34688 /* CoreDataStack.swift in Sources */,
+				D3AFE5BC1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift in Sources */,
 				D32A1AF91FD5F02B00F1C6C7 /* MonthReviewViewController.swift in Sources */,
-				D32A1AFD1FD5F0BF00F1C6C7 /* MonthIndexViewController.swift in Sources */,
+				D32A1AFD1FD5F0BF00F1C6C7 /* YearIndexViewController.swift in Sources */,
 				D32A1ADF1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld in Sources */,
 				D32A1AD71FD5E05100F1C6C7 /* AppDelegate.swift in Sources */,
 				D32A1AED1FD5EE0900F1C6C7 /* DailyViewController.swift in Sources */,
@@ -329,7 +359,9 @@
 				D32A1B031FD5F16100F1C6C7 /* MasterIndexViewController.swift in Sources */,
 				D32A1B011FD5F12100F1C6C7 /* YearReviewViewController.swift in Sources */,
 				D3A41B7E1FD60F78006C2E3E /* WeekMain2ViewController.swift in Sources */,
+				D3F7DA4E1FDAF4E400ECE1ED /* MonthMainVisionViewController.swift in Sources */,
 				D386A5DE1FD7282B0068FBCB /* DailyScheduleTableViewCell.swift in Sources */,
+				D3F7DA501FDAF58100ECE1ED /* MonthlyPageViewController.swift in Sources */,
 				D32A1AF11FD5EE7A00F1C6C7 /* WeekMain1ViewController.swift in Sources */,
 				D32A1AF71FD5F00500F1C6C7 /* MonthMainViewController.swift in Sources */,
 				D3E87B541FD8579800A34688 /* ThoughtEntryController.swift in Sources */,

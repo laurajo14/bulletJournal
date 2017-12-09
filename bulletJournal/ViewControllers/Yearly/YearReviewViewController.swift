@@ -10,18 +10,53 @@ import UIKit
 
 class YearReviewViewController: UIViewController {
 
+    //MARK: - Outlets
+    @IBOutlet weak var sideMenuWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var yearInReviewLabel: UILabel!
+
+    //MARK: - Properties
+    var isSlideMenuHidden = true
+    
+    //MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        setUpYearLabel()
+        sideMenuWidthConstraint.constant = 0
     }
     
+    override func viewDidDisappear(_ animated: Bool){
+        super.viewDidDisappear(false)
+        sideMenuWidthConstraint.constant = 0
+    }
+    
+    //MARK: - Actions
+    @IBAction func menuButtonTapped(_ sender: UIBarButtonItem) {
+        if isSlideMenuHidden {
+            //          sideMenuConstraint.constant = 0
+            sideMenuWidthConstraint.constant = 180
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        } else {
+            //            sideMenuConstraint.constant = -180
+            sideMenuWidthConstraint.constant = 0
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        isSlideMenuHidden = !isSlideMenuHidden
+    }
 
+    //MARK: - Year Label
+    func setUpYearLabel() {
+        let currentDate = Date(timeInterval: 0, since: Date())
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        let thisYear = formatter.string(from: currentDate)
+        yearInReviewLabel.text = "\(thisYear): A Year In Review"
+    }
+    
     /*
     // MARK: - Navigation
 

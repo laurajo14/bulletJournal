@@ -8,19 +8,25 @@
 
 import UIKit
 
-class MonthIndexViewController: UIViewController {
+class YearIndexViewController: UIViewController {    
 
+    //MARK: - Outlets
+//    @IBOutlet weak var yearLabel: UILabel!
+    
+    //MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        setUpYearLabel()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    //MARK: - Year Label
+//    func setUpYearLabel() {
+//        let currentDate = Date(timeInterval: 0, since: Date())
+//        let formatter = DateFormatter()
+//        formatter.dateFormat = "yyyy"
+//        let today = formatter.string(from: currentDate)
+//        yearLabel.text = "\(today)"
+//    }
 
     /*
     // MARK: - Navigation

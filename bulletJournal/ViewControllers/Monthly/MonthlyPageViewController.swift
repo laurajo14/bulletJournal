@@ -1,23 +1,23 @@
 //
-//  WeeklyPageViewController.swift
+//  MonthlyPageViewController.swift
 //  bulletJournal
 //
-//  Created by Laura O'Brien on 12/4/17.
+//  Created by Laura O'Brien on 12/8/17.
 //  Copyright © 2017 Laura O'Brien. All rights reserved.
 //
 
 import UIKit
 
-class WeeklyPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+class MonthlyPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
     //MARK: - Properties
     var pageControl = UIPageControl()
-
-    ///Array of VCs being viewed
+    
     lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVC(viewController: "weeklyMainVision"),
-                self.newVC(viewController: "weeklyMainTasks"),
-                self.newVC(viewController: "weekReview")]
+        return [self.newVC(viewController: "monthlyMain"),
+                self.newVC(viewController: "monthlyMainTask"),
+                self.newVC(viewController: "monthlyMainVision"),
+                self.newVC(viewController: "monthReview")]
     }()
     
     //View Lifecycles
@@ -53,7 +53,6 @@ class WeeklyPageViewController: UIPageViewController, UIPageViewControllerDelega
     }
     
     //MARK: - Other Functions
-    ///Used to load the view controllers as you scroll through different views
     func newVC(viewController: String) -> UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController)
     }
@@ -66,7 +65,7 @@ class WeeklyPageViewController: UIPageViewController, UIPageViewControllerDelega
         
         let previousIndex = viewControllerIndex - 1
         
-        // User is on the first view controller and swiped left to loop to the last view controller
+        // Loop
         guard previousIndex >= 0 else {
             //return orderedViewControllers.last
             // Uncommment the line below, commment out the line above if you don't want the page control to loop
@@ -114,3 +113,4 @@ class WeeklyPageViewController: UIPageViewController, UIPageViewControllerDelega
      */
     
 }
+
