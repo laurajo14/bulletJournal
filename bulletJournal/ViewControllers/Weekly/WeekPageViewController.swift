@@ -19,14 +19,15 @@ class WeeklyPageViewController: UIPageViewController, UIPageViewControllerDelega
                 self.newVC(viewController: "weeklyMainTasks"),
                 self.newVC(viewController: "weekReview")]
     }()
+    var viewController = UIViewController()
     
     //View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
         self.delegate = self
+
         configurePageControl()
-        
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
                                direction: .forward,

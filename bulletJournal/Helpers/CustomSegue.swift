@@ -1,5 +1,5 @@
 //
-//  SegueFromLeft.swift
+//  CustomSegue.swift
 //  bulletJournal
 //
 //  Created by Laura O'Brien on 12/7/17.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SegueFromLeft: UIStoryboardSegue {
+class CustomSegue: UIStoryboardSegue {
     override func perform() {
         let src = self.source
         let dst = self.destination

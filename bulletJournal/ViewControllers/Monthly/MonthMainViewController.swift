@@ -81,11 +81,19 @@ class MonthMainViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "monthlyEventCell", for: indexPath) as? MonthlyEventTableViewCell else { return UITableViewCell() }
         
-        //Want array of monthly days
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd E"
+        //Array of monthly dates
+        let daysFormatter = DateFormatter()
+        daysFormatter.dateFormat = "dd"
+        let date = daysFormatter.string(from: daysOfTheMonthArray[indexPath.row])
         
-        cell.dateLabel.text = formatter.string(from: daysOfTheMonthArray[indexPath.row])
+        //Array of monthly weekdays
+        let weekDaysFormatter = DateFormatter()
+        weekDaysFormatter.dateFormat = "E"
+        let weekday = daysOfTheMonthArray.map{ weekDaysFormatter.string(from: $0) }
+        let weekdayFirstLetters = weekday.map{ $0.first! }[indexPath.row]
+
+        //Formatting
+        cell.dateLabel.text = "\(date) \(weekdayFirstLetters)"
         
         return cell
     }
@@ -102,16 +110,17 @@ class MonthMainViewController: UIViewController, UITableViewDelegate, UITableVie
 
 }
 
+
 extension Date {
     func startOfMonth() -> Date {
-        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: Calendar.current.startOfDay(for: self)))!
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year,.month], from: self))!
     }
-    
+
     func endOfMonth() -> Date {
         return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
-    }
-    
-    func generateDatesArrayBetweenTwoDates(startDate: Date , endDate:Date) ->[Date]
+        }
+
+    func generateDatesArrayBetweenTwoDates(startDate: Date, endDate: Date) -> [Date]
     {
         var datesArray: [Date] =  [Date]()
         var startDate = startDate
@@ -128,3 +137,4 @@ extension Date {
         return datesArray
     }
 }
+

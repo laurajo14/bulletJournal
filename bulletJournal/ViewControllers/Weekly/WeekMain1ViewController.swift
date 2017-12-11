@@ -19,7 +19,6 @@ class WeekMain1ViewController: UIViewController {
     //MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-    //    sideMenuConstraint.constant = -180
         sideMenuWidthConstraint.constant = 0
     }
     
