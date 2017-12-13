@@ -19,8 +19,8 @@
     <elements>
         <element name="DailyScheduleEntry" positionX="-45" positionY="9" width="128" height="60"/>
         <element name="EventEntry" positionX="-36" positionY="18" width="128" height="60"/>
+        <element name="MonthlyTaskEntry" positionX="-45" positionY="9" width="128" height="75"/>
         <element name="TaskEntry" positionX="-54" positionY="0" width="128" height="60"/>
         <element name="ThoughtEntry" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="MonthlyTaskEntry" positionX="-45" positionY="9" width="128" height="75"/>
     </elements>
 </model>
