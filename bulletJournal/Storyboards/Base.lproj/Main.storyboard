@@ -871,158 +871,205 @@
             <point key="canvasLocation" x="-2591" y="-558"/>
         </scene>
         <!--Year Index View Controller-->
-        <scene sceneID="YW3-oj-b78">
+        <scene sceneID="med-vk-Yer">
             <objects>
-                <viewController storyboardIdentifier="yearlyIndex" id="a5Y-hg-dOC" customClass="YearIndexViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XB8-4o-hPN">
+                <viewController storyboardIdentifier="yearlyIndex" id="Eun-cd-7gr" customClass="YearIndexViewController" customModule="bulletJournal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="moj-HT-fVZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hs-u8-WEs">
-                                <rect key="frame" x="-0.5" y="80" width="375" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLb-L6-4dy">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pce-jS-oca">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem id="OIu-aL-kzp">
-                                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="aXU-EG-GRi">
+                                    <navigationItem id="5d0-4N-jDb">
+                                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="d5w-KS-rBv">
                                             <connections>
-                                                <action selector="menuButtonTapped:" destination="a5Y-hg-dOC" id="TqU-05-aom"/>
+                                                <action selector="menuButtonTapped:" destination="Eun-cd-7gr" id="FgZ-ae-1pT"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="yB8-Ll-0UU" userLabel="Month Stack View">
-                                <rect key="frame" x="37.5" y="138" width="300" height="499"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ie-dZ-E9Q">
+                                <rect key="frame" x="0.0" y="80" width="375" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4OU-tW-dss">
+                                <rect key="frame" x="23.5" y="138" width="328" height="499"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-92-HCV">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="62.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Llu-US-NOW">
+                                        <rect key="frame" x="0.0" y="0.0" width="328" height="66.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwG-dR-pNk">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="62.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pL5-QI-uFw">
+                                                <rect key="frame" x="0.0" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="January"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlz-Wc-Uwk">
-                                                <rect key="frame" x="162.5" y="0.0" width="137.5" height="62.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEj-Yu-SDN">
+                                                <rect key="frame" x="174" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="February"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="VVV-m2-aL4">
-                                        <rect key="frame" x="0.0" y="87.5" width="300" height="62"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="s4I-xR-lPH">
+                                        <rect key="frame" x="0.0" y="86.5" width="328" height="66.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9p-Zz-8cW">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="62"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ng1-iG-rGW">
+                                                <rect key="frame" x="0.0" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="March"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-tq-Sp7">
-                                                <rect key="frame" x="162.5" y="0.0" width="137.5" height="62"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNk-tc-m5u">
+                                                <rect key="frame" x="174" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="April"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="W0T-uM-UFx">
-                                        <rect key="frame" x="0.0" y="174.5" width="300" height="62.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PYu-rp-A3p">
+                                        <rect key="frame" x="0.0" y="173" width="328" height="66.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BO8-d7-DVt">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="62.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDT-OP-sa0">
+                                                <rect key="frame" x="0.0" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="May"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35Z-ad-dcg">
-                                                <rect key="frame" x="162.5" y="0.0" width="137.5" height="62.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJX-Ez-1PT">
+                                                <rect key="frame" x="174" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="June"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="4pp-ch-78m">
-                                        <rect key="frame" x="0.0" y="262" width="300" height="62.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qH5-Jt-wb3">
+                                        <rect key="frame" x="0.0" y="259.5" width="328" height="66.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAG-td-gf6">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="62.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4Q-RT-I3P">
+                                                <rect key="frame" x="0.0" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="July"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9d2-EF-4Qo">
-                                                <rect key="frame" x="162.5" y="0.0" width="137.5" height="62.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9H-Zo-dsS">
+                                                <rect key="frame" x="174" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="August"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="F0v-Xb-FeG">
-                                        <rect key="frame" x="0.0" y="349.5" width="300" height="62"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ej1-vN-n3A">
+                                        <rect key="frame" x="0.0" y="346" width="328" height="66.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfI-1d-nG3">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="62"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXX-qM-eUh">
+                                                <rect key="frame" x="0.0" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="September"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6X-pf-vRd">
-                                                <rect key="frame" x="162.5" y="0.0" width="137.5" height="62"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SC3-Ey-iz3">
+                                                <rect key="frame" x="174" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="October"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="THl-mu-xRb">
-                                        <rect key="frame" x="0.0" y="436.5" width="300" height="62.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vGU-13-BKJ">
+                                        <rect key="frame" x="0.0" y="432.5" width="328" height="66.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgH-et-Ebb">
-                                                <rect key="frame" x="0.0" y="0.0" width="137.5" height="62.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MD-fr-jGR">
+                                                <rect key="frame" x="0.0" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="November"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cl1-7r-TA0">
-                                                <rect key="frame" x="162.5" y="0.0" width="137.5" height="62.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXD-tB-Zvh">
+                                                <rect key="frame" x="174" y="0.0" width="154" height="66.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="December"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="THl-mu-xRb" firstAttribute="centerX" secondItem="yB8-Ll-0UU" secondAttribute="centerX" id="2pg-ca-Vbt"/>
-                                    <constraint firstItem="W0T-uM-UFx" firstAttribute="centerX" secondItem="yB8-Ll-0UU" secondAttribute="centerX" id="BUW-Iw-JED"/>
-                                    <constraint firstItem="THl-mu-xRb" firstAttribute="width" secondItem="yB8-Ll-0UU" secondAttribute="width" id="HoT-NV-L3h"/>
-                                    <constraint firstItem="4pp-ch-78m" firstAttribute="width" secondItem="yB8-Ll-0UU" secondAttribute="width" id="VQ1-XK-HXw"/>
-                                    <constraint firstItem="F0v-Xb-FeG" firstAttribute="centerX" secondItem="yB8-Ll-0UU" secondAttribute="centerX" id="Xr7-xl-jiI"/>
-                                    <constraint firstItem="nMZ-92-HCV" firstAttribute="centerX" secondItem="yB8-Ll-0UU" secondAttribute="centerX" id="dTi-uq-o6f"/>
-                                    <constraint firstItem="W0T-uM-UFx" firstAttribute="width" secondItem="yB8-Ll-0UU" secondAttribute="width" id="iAP-zB-0WX"/>
-                                    <constraint firstItem="VVV-m2-aL4" firstAttribute="centerX" secondItem="yB8-Ll-0UU" secondAttribute="centerX" id="mfW-MB-gO2"/>
-                                    <constraint firstItem="nMZ-92-HCV" firstAttribute="width" secondItem="yB8-Ll-0UU" secondAttribute="width" id="tk9-nL-ieD"/>
-                                    <constraint firstItem="F0v-Xb-FeG" firstAttribute="width" secondItem="yB8-Ll-0UU" secondAttribute="width" id="xAF-kW-Jvl"/>
-                                    <constraint firstItem="VVV-m2-aL4" firstAttribute="width" secondItem="yB8-Ll-0UU" secondAttribute="width" id="y9X-zS-8xq"/>
-                                    <constraint firstItem="4pp-ch-78m" firstAttribute="centerX" secondItem="yB8-Ll-0UU" secondAttribute="centerX" id="yfz-KJ-z2C"/>
-                                </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3Q-wQ-Pk8" userLabel="ToC View">
+                                <rect key="frame" x="0.0" y="64" width="180" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table of Contents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXz-GM-SI5">
+                                        <rect key="frame" x="11" y="10" width="157.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23f-0X-cPu">
+                                        <rect key="frame" x="11.5" y="44" width="157.5" height="30"/>
+                                        <state key="normal" title="Today">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gf-x2-7lP">
+                                        <rect key="frame" x="11.5" y="82" width="157.5" height="30"/>
+                                        <state key="normal" title="Yearly">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLJ-va-Mda">
+                                        <rect key="frame" x="11.5" y="120" width="157.5" height="30"/>
+                                        <state key="normal" title="Monthly">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8o-lp-NWW">
+                                        <rect key="frame" x="11.5" y="158" width="157.5" height="30"/>
+                                        <state key="normal" title="Weekly">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95639318230000003" green="0.96844011549999998" blue="0.98496979480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4Gf-x2-7lP" firstAttribute="width" secondItem="23f-0X-cPu" secondAttribute="width" id="Buc-d0-8DW"/>
+                                    <constraint firstItem="X8o-lp-NWW" firstAttribute="top" secondItem="FLJ-va-Mda" secondAttribute="bottom" constant="8" id="DZZ-vw-ZBC"/>
+                                    <constraint firstItem="X8o-lp-NWW" firstAttribute="width" secondItem="FLJ-va-Mda" secondAttribute="width" id="GBA-vo-lzK"/>
+                                    <constraint firstItem="4Gf-x2-7lP" firstAttribute="top" secondItem="23f-0X-cPu" secondAttribute="bottom" constant="8" id="Hub-fQ-N3F"/>
+                                    <constraint firstItem="zXz-GM-SI5" firstAttribute="centerX" secondItem="C3Q-wQ-Pk8" secondAttribute="centerX" id="MKa-O9-qNm"/>
+                                    <constraint firstAttribute="width" constant="180" id="Tz2-sG-WGh"/>
+                                    <constraint firstItem="zXz-GM-SI5" firstAttribute="top" secondItem="C3Q-wQ-Pk8" secondAttribute="top" constant="10" id="WFu-4J-mod"/>
+                                    <constraint firstItem="23f-0X-cPu" firstAttribute="width" secondItem="C3Q-wQ-Pk8" secondAttribute="width" multiplier="7/8" id="WOA-dV-JMq"/>
+                                    <constraint firstItem="4Gf-x2-7lP" firstAttribute="centerX" secondItem="C3Q-wQ-Pk8" secondAttribute="centerX" id="WmA-Oi-W1c"/>
+                                    <constraint firstItem="23f-0X-cPu" firstAttribute="top" secondItem="zXz-GM-SI5" secondAttribute="bottom" constant="10" id="aYG-bv-3Lp"/>
+                                    <constraint firstItem="FLJ-va-Mda" firstAttribute="centerX" secondItem="C3Q-wQ-Pk8" secondAttribute="centerX" id="c8D-s6-tM1"/>
+                                    <constraint firstItem="FLJ-va-Mda" firstAttribute="top" secondItem="4Gf-x2-7lP" secondAttribute="bottom" constant="8" id="hnS-i6-MJK"/>
+                                    <constraint firstItem="X8o-lp-NWW" firstAttribute="centerX" secondItem="C3Q-wQ-Pk8" secondAttribute="centerX" id="kYV-qr-9mg"/>
+                                    <constraint firstItem="23f-0X-cPu" firstAttribute="centerX" secondItem="C3Q-wQ-Pk8" secondAttribute="centerX" id="q5f-eC-6nT"/>
+                                    <constraint firstItem="FLJ-va-Mda" firstAttribute="width" secondItem="4Gf-x2-7lP" secondAttribute="width" id="zRa-jg-nJB"/>
+                                    <constraint firstItem="zXz-GM-SI5" firstAttribute="width" secondItem="23f-0X-cPu" secondAttribute="width" id="zyo-sk-emA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="0hs-u8-WEs" firstAttribute="top" secondItem="XLb-L6-4dy" secondAttribute="bottom" constant="16" id="5Bn-OH-Dfy"/>
-                            <constraint firstItem="0hs-u8-WEs" firstAttribute="width" secondItem="XB8-4o-hPN" secondAttribute="width" id="GCY-2r-JAn"/>
-                            <constraint firstItem="yB8-Ll-0UU" firstAttribute="centerX" secondItem="ezb-F9-wkT" secondAttribute="centerX" id="Gnv-yH-dRh"/>
-                            <constraint firstItem="XLb-L6-4dy" firstAttribute="width" secondItem="XB8-4o-hPN" secondAttribute="width" id="MLD-Dx-mxn"/>
-                            <constraint firstItem="0hs-u8-WEs" firstAttribute="centerX" secondItem="ezb-F9-wkT" secondAttribute="centerX" id="ON3-S2-Cq1"/>
-                            <constraint firstItem="XLb-L6-4dy" firstAttribute="centerX" secondItem="ezb-F9-wkT" secondAttribute="centerX" id="Tyl-CV-To2"/>
-                            <constraint firstItem="XLb-L6-4dy" firstAttribute="top" secondItem="ezb-F9-wkT" secondAttribute="top" id="XvY-QM-yCq"/>
-                            <constraint firstItem="yB8-Ll-0UU" firstAttribute="width" secondItem="XB8-4o-hPN" secondAttribute="width" multiplier="4/5" id="cPM-bf-Q3u"/>
-                            <constraint firstItem="yB8-Ll-0UU" firstAttribute="bottom" secondItem="ezb-F9-wkT" secondAttribute="bottom" constant="-30" id="nDn-HF-3Ij"/>
-                            <constraint firstItem="yB8-Ll-0UU" firstAttribute="top" secondItem="0hs-u8-WEs" secondAttribute="bottom" constant="16" id="u6L-7d-LMk"/>
+                            <constraint firstItem="4Ie-dZ-E9Q" firstAttribute="centerX" secondItem="1rT-CO-j5L" secondAttribute="centerX" id="711-sk-I6q"/>
+                            <constraint firstItem="4OU-tW-dss" firstAttribute="top" secondItem="4Ie-dZ-E9Q" secondAttribute="bottom" constant="16" id="8LA-xA-x8c"/>
+                            <constraint firstItem="4OU-tW-dss" firstAttribute="centerX" secondItem="1rT-CO-j5L" secondAttribute="centerX" id="Bl3-m2-1I5"/>
+                            <constraint firstItem="C3Q-wQ-Pk8" firstAttribute="leading" secondItem="1rT-CO-j5L" secondAttribute="leading" id="Fds-N9-Ug1"/>
+                            <constraint firstItem="4Ie-dZ-E9Q" firstAttribute="width" secondItem="moj-HT-fVZ" secondAttribute="width" id="If9-PH-54L"/>
+                            <constraint firstItem="C3Q-wQ-Pk8" firstAttribute="top" secondItem="Pce-jS-oca" secondAttribute="bottom" id="Kbs-dN-G2D"/>
+                            <constraint firstItem="Pce-jS-oca" firstAttribute="top" secondItem="1rT-CO-j5L" secondAttribute="top" id="M2I-tg-cmF"/>
+                            <constraint firstItem="4OU-tW-dss" firstAttribute="width" secondItem="moj-HT-fVZ" secondAttribute="width" multiplier="7/8" id="VSz-HM-vdj"/>
+                            <constraint firstItem="1rT-CO-j5L" firstAttribute="bottom" secondItem="4OU-tW-dss" secondAttribute="bottom" constant="30" id="byU-WN-IyC"/>
+                            <constraint firstItem="4Ie-dZ-E9Q" firstAttribute="top" secondItem="Pce-jS-oca" secondAttribute="bottom" constant="16" id="mZW-GC-eLa"/>
+                            <constraint firstItem="Pce-jS-oca" firstAttribute="width" secondItem="moj-HT-fVZ" secondAttribute="width" id="nVZ-zB-KfN"/>
+                            <constraint firstItem="1rT-CO-j5L" firstAttribute="bottom" secondItem="C3Q-wQ-Pk8" secondAttribute="bottom" id="q1n-wO-ahg"/>
+                            <constraint firstItem="Pce-jS-oca" firstAttribute="centerX" secondItem="1rT-CO-j5L" secondAttribute="centerX" id="xuh-xF-318"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ezb-F9-wkT"/>
+                        <viewLayoutGuide key="safeArea" id="1rT-CO-j5L"/>
                     </view>
+                    <connections>
+                        <outlet property="sideMenuWidthConstraint" destination="Tz2-sG-WGh" id="o4c-7q-fvZ"/>
+                        <outlet property="yearLabel" destination="4Ie-dZ-E9Q" id="NmZ-rp-jC0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9ug-qZ-AdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nf-Wy-Jq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2591" y="2722"/>
         </scene>
@@ -2233,18 +2280,27 @@
                                         <state key="normal" title="Today">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="xxA-vG-Zcg" kind="show" id="pY0-CK-eLm"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjs-gW-zgf">
                                         <rect key="frame" x="11.5" y="82" width="157.5" height="30"/>
                                         <state key="normal" title="Yearly">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="ks9-Iz-eXL" kind="show" id="wVd-Ua-EBz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhA-fJ-i57">
                                         <rect key="frame" x="11.5" y="120" width="157.5" height="30"/>
                                         <state key="normal" title="Monthly">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="izN-QW-TYX" kind="show" id="IBw-Hz-og7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxP-uH-tb5">
                                         <rect key="frame" x="11.5" y="158" width="157.5" height="30"/>
@@ -2408,7 +2464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naY-kH-ogS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39" y="-558"/>
+            <point key="canvasLocation" x="-863" y="-1338"/>
         </scene>
         <!--Month Journal Entry View Controller-->
         <scene sceneID="lvP-iT-q9A">
@@ -2681,11 +2737,11 @@ wRHMEdQR4RHuEgMSCBIMEg4SEBISEhsSIBImEi4SMBIyEjQSNhI7EkMjryOxI7YjxCPII88j1CPhI+Qj
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="TWd-qT-Yif"/>
+        <segue reference="lyj-ID-YsI"/>
         <segue reference="fDZ-3f-XYK"/>
-        <segue reference="Qge-WT-HbP"/>
-        <segue reference="MCX-Kk-1f8"/>
-        <segue reference="Ncz-bC-3V4"/>
-        <segue reference="K5J-cd-BMW"/>
-        <segue reference="9SE-3K-Iuf"/>
+        <segue reference="wVd-Ua-EBz"/>
+        <segue reference="xtT-tz-c7x"/>
+        <segue reference="TpH-wg-smB"/>
+        <segue reference="nj8-eP-gmr"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,13 +10,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "bulletJournal/ViewControllers/Daily/DailyViewController.swift"
-            timestampString = "534554193.145644"
+            timestampString = "534704386.430612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
             landmarkName = "DailyViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bulletJournal.DailyViewController.fetchedResultsController.getter : Swift.Optional&lt;__ObjC.NSFetchedResultsController&lt;bulletJournal.DailyScheduleEntry&gt;&gt;"
+                  moduleName = "bulletJournal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/AppsInProgress/bulletJournal/bulletJournal/ViewControllers/Daily/DailyViewController.swift"
+                  timestampString = "534704372.707951"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bulletJournal.DailyViewController.fetchedResultsController.setter : Swift.Optional&lt;__ObjC.NSFetchedResultsController&lt;bulletJournal.DailyScheduleEntry&gt;&gt;"
+                  moduleName = "bulletJournal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/AppsInProgress/bulletJournal/bulletJournal/ViewControllers/Daily/DailyViewController.swift"
+                  timestampString = "534704372.710018"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bulletJournal.DailyViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; bulletJournal.DailyViewController"
+                  moduleName = "bulletJournal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/AppsInProgress/bulletJournal/bulletJournal/ViewControllers/Daily/DailyViewController.swift"
+                  timestampString = "534704372.712043"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "2076">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bulletJournal.DailyViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;bulletJournal.DailyViewController&gt;"
+                  moduleName = "bulletJournal"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/AppsInProgress/bulletJournal/bulletJournal/ViewControllers/Daily/DailyViewController.swift"
+                  timestampString = "534704372.713987"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "2032">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
