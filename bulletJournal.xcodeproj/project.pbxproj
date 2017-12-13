@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D310D8DD1FE1D17C00E86D43 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D310D8DC1FE1D17C00E86D43 /* CloudKit.framework */; };
+		D310D8DF1FE1D36600E86D43 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D310D8DE1FE1D36600E86D43 /* Keys.swift */; };
 		D32A1AD71FD5E05100F1C6C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AD61FD5E05100F1C6C7 /* AppDelegate.swift */; };
 		D32A1ADC1FD5E05100F1C6C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32A1ADA1FD5E05100F1C6C7 /* Main.storyboard */; };
-		D32A1ADF1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D32A1ADD1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld */; };
 		D32A1AE11FD5E05100F1C6C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D32A1AE01FD5E05100F1C6C7 /* Assets.xcassets */; };
 		D32A1AE41FD5E05100F1C6C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32A1AE21FD5E05100F1C6C7 /* LaunchScreen.storyboard */; };
 		D32A1AED1FD5EE0900F1C6C7 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1AEC1FD5EE0900F1C6C7 /* DailyViewController.swift */; };
@@ -26,7 +27,7 @@
 		D32A1B051FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32A1B041FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift */; };
 		D330865D1FDA11D40067C4E5 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D330865C1FDA11D40067C4E5 /* CustomSegue.swift */; };
 		D35B805F1FD74AE000EA79DE /* BulletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35B805E1FD74AE000EA79DE /* BulletTableViewCell.swift */; };
-		D37306E21FDCA9DB000DF356 /* MonthlyTaskEntry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37306E11FDCA9DB000DF356 /* MonthlyTaskEntry+Convenience.swift */; };
+		D37306E21FDCA9DB000DF356 /* MonthlyTaskEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37306E11FDCA9DB000DF356 /* MonthlyTaskEntry.swift */; };
 		D37306E41FDCAB39000DF356 /* MonthlyTaskEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37306E31FDCAB39000DF356 /* MonthlyTaskEntryController.swift */; };
 		D386A5DE1FD7282B0068FBCB /* DailyScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D386A5DD1FD7282B0068FBCB /* DailyScheduleTableViewCell.swift */; };
 		D39759F21FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39759F11FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift */; };
@@ -34,29 +35,26 @@
 		D3A41B791FD60E98006C2E3E /* WeekPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A41B781FD60E98006C2E3E /* WeekPageViewController.swift */; };
 		D3A41B7E1FD60F78006C2E3E /* WeekMain2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A41B7D1FD60F78006C2E3E /* WeekMain2ViewController.swift */; };
 		D3AFE5BC1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE5BB1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift */; };
-		D3C0A2301FD9AEA200F93361 /* DailyScheduleEntry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry+Convenience.swift */; };
+		D3C0A2301FD9AEA200F93361 /* DailyScheduleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry.swift */; };
 		D3C0A2321FD9B0D800F93361 /* DailyScheduleEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0A2311FD9B0D800F93361 /* DailyScheduleEntryController.swift */; };
 		D3E87B541FD8579800A34688 /* ThoughtEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B531FD8579800A34688 /* ThoughtEntryController.swift */; };
-		D3E87B561FD857AF00A34688 /* ThoughtEntry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B551FD857AF00A34688 /* ThoughtEntry+Convenience.swift */; };
-		D3E87B581FD8583200A34688 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B571FD8583200A34688 /* CoreDataStack.swift */; };
-		D3E87B5A1FD8598100A34688 /* EventEntry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B591FD8598100A34688 /* EventEntry+Convenience.swift */; };
-		D3E87B5C1FD8598C00A34688 /* TaskEntry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B5B1FD8598C00A34688 /* TaskEntry+Convenience.swift */; };
+		D3E87B561FD857AF00A34688 /* ThoughtEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B551FD857AF00A34688 /* ThoughtEntry.swift */; };
+		D3E87B5A1FD8598100A34688 /* EventEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B591FD8598100A34688 /* EventEntry.swift */; };
+		D3E87B5C1FD8598C00A34688 /* TaskEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B5B1FD8598C00A34688 /* TaskEntry.swift */; };
 		D3E87B5E1FD85A0E00A34688 /* EventEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B5D1FD85A0E00A34688 /* EventEntryController.swift */; };
 		D3E87B601FD85A1600A34688 /* TaskEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B5F1FD85A1600A34688 /* TaskEntryController.swift */; };
 		D3F7DA4C1FDAF4BE00ECE1ED /* MonthMainTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7DA4B1FDAF4BE00ECE1ED /* MonthMainTaskViewController.swift */; };
 		D3F7DA4E1FDAF4E400ECE1ED /* MonthMainVisionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7DA4D1FDAF4E400ECE1ED /* MonthMainVisionViewController.swift */; };
 		D3F7DA501FDAF58100ECE1ED /* MonthlyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F7DA4F1FDAF58100ECE1ED /* MonthlyPageViewController.swift */; };
-		D59BC500B0E1E5EE727069A1 /* Pods_bulletJournal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FEA1E0B12AE2896787BA393 /* Pods_bulletJournal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		36610EF29C386AD78BF7B602 /* Pods-bulletJournal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bulletJournal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bulletJournal/Pods-bulletJournal.debug.xcconfig"; sourceTree = "<group>"; };
-		3FEA1E0B12AE2896787BA393 /* Pods_bulletJournal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bulletJournal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2940FBA81DD3E25B827507A /* Pods-bulletJournal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bulletJournal.release.xcconfig"; path = "Pods/Target Support Files/Pods-bulletJournal/Pods-bulletJournal.release.xcconfig"; sourceTree = "<group>"; };
+		D310D8DB1FE1D17700E86D43 /* bulletJournal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bulletJournal.entitlements; sourceTree = "<group>"; };
+		D310D8DC1FE1D17C00E86D43 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D310D8DE1FE1D36600E86D43 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		D32A1AD31FD5E05100F1C6C7 /* bulletJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bulletJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32A1AD61FD5E05100F1C6C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D32A1ADB1FD5E05100F1C6C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D32A1ADE1FD5E05100F1C6C7 /* bulletJournal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bulletJournal.xcdatamodel; sourceTree = "<group>"; };
 		D32A1AE01FD5E05100F1C6C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D32A1AE31FD5E05100F1C6C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D32A1AE51FD5E05100F1C6C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,7 +72,7 @@
 		D32A1B041FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearJournalEntryViewController.swift; sourceTree = "<group>"; };
 		D330865C1FDA11D40067C4E5 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		D35B805E1FD74AE000EA79DE /* BulletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletTableViewCell.swift; sourceTree = "<group>"; };
-		D37306E11FDCA9DB000DF356 /* MonthlyTaskEntry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MonthlyTaskEntry+Convenience.swift"; sourceTree = "<group>"; };
+		D37306E11FDCA9DB000DF356 /* MonthlyTaskEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTaskEntry.swift; sourceTree = "<group>"; };
 		D37306E31FDCAB39000DF356 /* MonthlyTaskEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTaskEntryController.swift; sourceTree = "<group>"; };
 		D386A5DD1FD7282B0068FBCB /* DailyScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		D39759F11FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyTaskTableViewCell.swift; sourceTree = "<group>"; };
@@ -82,13 +80,12 @@
 		D3A41B781FD60E98006C2E3E /* WeekPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPageViewController.swift; sourceTree = "<group>"; };
 		D3A41B7D1FD60F78006C2E3E /* WeekMain2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekMain2ViewController.swift; sourceTree = "<group>"; };
 		D3AFE5BB1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyEventTableViewCell.swift; sourceTree = "<group>"; };
-		D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyScheduleEntry+Convenience.swift"; sourceTree = "<group>"; };
+		D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleEntry.swift; sourceTree = "<group>"; };
 		D3C0A2311FD9B0D800F93361 /* DailyScheduleEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleEntryController.swift; sourceTree = "<group>"; };
 		D3E87B531FD8579800A34688 /* ThoughtEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtEntryController.swift; sourceTree = "<group>"; };
-		D3E87B551FD857AF00A34688 /* ThoughtEntry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ThoughtEntry+Convenience.swift"; sourceTree = "<group>"; };
-		D3E87B571FD8583200A34688 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		D3E87B591FD8598100A34688 /* EventEntry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventEntry+Convenience.swift"; sourceTree = "<group>"; };
-		D3E87B5B1FD8598C00A34688 /* TaskEntry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntry+Convenience.swift"; sourceTree = "<group>"; };
+		D3E87B551FD857AF00A34688 /* ThoughtEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtEntry.swift; sourceTree = "<group>"; };
+		D3E87B591FD8598100A34688 /* EventEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntry.swift; sourceTree = "<group>"; };
+		D3E87B5B1FD8598C00A34688 /* TaskEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEntry.swift; sourceTree = "<group>"; };
 		D3E87B5D1FD85A0E00A34688 /* EventEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntryController.swift; sourceTree = "<group>"; };
 		D3E87B5F1FD85A1600A34688 /* TaskEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEntryController.swift; sourceTree = "<group>"; };
 		D3F7DA4B1FDAF4BE00ECE1ED /* MonthMainTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthMainTaskViewController.swift; sourceTree = "<group>"; };
@@ -101,28 +98,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D59BC500B0E1E5EE727069A1 /* Pods_bulletJournal.framework in Frameworks */,
+				D310D8DD1FE1D17C00E86D43 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		51ED7B4609665B755D256DCB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				36610EF29C386AD78BF7B602 /* Pods-bulletJournal.debug.xcconfig */,
-				C2940FBA81DD3E25B827507A /* Pods-bulletJournal.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		D32A1ACA1FD5E05000F1C6C7 = {
 			isa = PBXGroup;
 			children = (
 				D32A1AD51FD5E05100F1C6C7 /* bulletJournal */,
 				D32A1AD41FD5E05100F1C6C7 /* Products */,
-				51ED7B4609665B755D256DCB /* Pods */,
 				F033AC25832250611D04FDC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -138,6 +125,7 @@
 		D32A1AD51FD5E05100F1C6C7 /* bulletJournal */ = {
 			isa = PBXGroup;
 			children = (
+				D310D8DB1FE1D17700E86D43 /* bulletJournal.entitlements */,
 				D330865E1FDA11DD0067C4E5 /* Helpers */,
 				D32A1AEF1FD5EE2200F1C6C7 /* Storyboards */,
 				D3E87B511FD8576900A34688 /* Models */,
@@ -184,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				D330865C1FDA11D40067C4E5 /* CustomSegue.swift */,
+				D310D8DE1FE1D36600E86D43 /* Keys.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -220,10 +209,10 @@
 		D37306E61FDCAFA1000DF356 /* Daily */ = {
 			isa = PBXGroup;
 			children = (
-				D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry+Convenience.swift */,
-				D3E87B551FD857AF00A34688 /* ThoughtEntry+Convenience.swift */,
-				D3E87B591FD8598100A34688 /* EventEntry+Convenience.swift */,
-				D3E87B5B1FD8598C00A34688 /* TaskEntry+Convenience.swift */,
+				D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry.swift */,
+				D3E87B551FD857AF00A34688 /* ThoughtEntry.swift */,
+				D3E87B591FD8598100A34688 /* EventEntry.swift */,
+				D3E87B5B1FD8598C00A34688 /* TaskEntry.swift */,
 			);
 			path = Daily;
 			sourceTree = "<group>";
@@ -285,10 +274,8 @@
 		D3E87B511FD8576900A34688 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D32A1ADD1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld */,
-				D37306E11FDCA9DB000DF356 /* MonthlyTaskEntry+Convenience.swift */,
+				D37306E11FDCA9DB000DF356 /* MonthlyTaskEntry.swift */,
 				D37306E61FDCAFA1000DF356 /* Daily */,
-				D3E87B571FD8583200A34688 /* CoreDataStack.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,7 +292,7 @@
 		F033AC25832250611D04FDC7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3FEA1E0B12AE2896787BA393 /* Pods_bulletJournal.framework */,
+				D310D8DC1FE1D17C00E86D43 /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -346,6 +333,14 @@
 					D32A1AD21FD5E05100F1C6C7 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -443,24 +438,23 @@
 				D39759FF1FDB484B0076CFE4 /* YearlyPageViewController.swift in Sources */,
 				D32A1AFF1FD5F10000F1C6C7 /* YearResolvesViewController.swift in Sources */,
 				D3F7DA4C1FDAF4BE00ECE1ED /* MonthMainTaskViewController.swift in Sources */,
+				D310D8DF1FE1D36600E86D43 /* Keys.swift in Sources */,
 				D330865D1FDA11D40067C4E5 /* CustomSegue.swift in Sources */,
 				D32A1AF31FD5EED000F1C6C7 /* WeekReviewViewController.swift in Sources */,
 				D37306E41FDCAB39000DF356 /* MonthlyTaskEntryController.swift in Sources */,
-				D37306E21FDCA9DB000DF356 /* MonthlyTaskEntry+Convenience.swift in Sources */,
-				D3E87B561FD857AF00A34688 /* ThoughtEntry+Convenience.swift in Sources */,
+				D37306E21FDCA9DB000DF356 /* MonthlyTaskEntry.swift in Sources */,
+				D3E87B561FD857AF00A34688 /* ThoughtEntry.swift in Sources */,
 				D3E87B601FD85A1600A34688 /* TaskEntryController.swift in Sources */,
 				D32A1B051FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift in Sources */,
 				D39759F21FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift in Sources */,
-				D3E87B5C1FD8598C00A34688 /* TaskEntry+Convenience.swift in Sources */,
-				D3E87B581FD8583200A34688 /* CoreDataStack.swift in Sources */,
+				D3E87B5C1FD8598C00A34688 /* TaskEntry.swift in Sources */,
 				D3AFE5BC1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift in Sources */,
 				D32A1AF91FD5F02B00F1C6C7 /* MonthReviewViewController.swift in Sources */,
 				D32A1AFD1FD5F0BF00F1C6C7 /* YearIndexViewController.swift in Sources */,
-				D32A1ADF1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld in Sources */,
 				D32A1AD71FD5E05100F1C6C7 /* AppDelegate.swift in Sources */,
 				D32A1AED1FD5EE0900F1C6C7 /* DailyViewController.swift in Sources */,
 				D35B805F1FD74AE000EA79DE /* BulletTableViewCell.swift in Sources */,
-				D3C0A2301FD9AEA200F93361 /* DailyScheduleEntry+Convenience.swift in Sources */,
+				D3C0A2301FD9AEA200F93361 /* DailyScheduleEntry.swift in Sources */,
 				D32A1B031FD5F16100F1C6C7 /* MasterIndexViewController.swift in Sources */,
 				D32A1B011FD5F12100F1C6C7 /* YearReviewViewController.swift in Sources */,
 				D3A41B7E1FD60F78006C2E3E /* WeekMain2ViewController.swift in Sources */,
@@ -474,7 +468,7 @@
 				D32A1AFB1FD5F05E00F1C6C7 /* MonthJournalEntryViewController.swift in Sources */,
 				D3E87B5E1FD85A0E00A34688 /* EventEntryController.swift in Sources */,
 				D3A41B791FD60E98006C2E3E /* WeekPageViewController.swift in Sources */,
-				D3E87B5A1FD8598100A34688 /* EventEntry+Convenience.swift in Sources */,
+				D3E87B5A1FD8598100A34688 /* EventEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,9 +603,9 @@
 		};
 		D32A1AE91FD5E05100F1C6C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36610EF29C386AD78BF7B602 /* Pods-bulletJournal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bulletJournal/bulletJournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V3RQ9AZ495;
 				INFOPLIST_FILE = "$(SRCROOT)/bulletJournal/Resources/Info.plist";
@@ -625,9 +619,9 @@
 		};
 		D32A1AEA1FD5E05100F1C6C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2940FBA81DD3E25B827507A /* Pods-bulletJournal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = bulletJournal/bulletJournal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V3RQ9AZ495;
 				INFOPLIST_FILE = "$(SRCROOT)/bulletJournal/Resources/Info.plist";
@@ -661,19 +655,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		D32A1ADD1FD5E05100F1C6C7 /* bulletJournal.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				D32A1ADE1FD5E05100F1C6C7 /* bulletJournal.xcdatamodel */,
-			);
-			currentVersion = D32A1ADE1FD5E05100F1C6C7 /* bulletJournal.xcdatamodel */;
-			path = bulletJournal.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D32A1ACB1FD5E05000F1C6C7 /* Project object */;
 }
