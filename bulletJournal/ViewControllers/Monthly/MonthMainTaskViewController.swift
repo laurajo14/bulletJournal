@@ -15,8 +15,10 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     var isSlideMenuHidden = true
     var monthlyTaskEntry: MonthlyTaskEntry?
     
+    var monthlyTaskEntries = MonthlyTaskEntryController.shared.monthlyTaskEntries.count
+    
     //FetchedResultsController
-    var fetchedResultsController: NSFetchedResultsController<MonthlyTaskEntry>!
+    var fetchedResultsController: NSFetchedResultsController<MonthlyTaskEntry>?
     
     func configureFetchedResultsController() {
         if fetchedResultsController == nil {
@@ -27,10 +29,10 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
             let frc = NSFetchedResultsController<MonthlyTaskEntry>(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: "bulletType", cacheName: nil)
             
             fetchedResultsController = frc
-            frc.delegate = self
+//            frc.delegate = self
         }
         do {
-            try fetchedResultsController.performFetch()
+            try fetchedResultsController?.performFetch()
         } catch {
             NSLog("Error starting fetched results controller: error \(error)")
         }
@@ -42,7 +44,7 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     
     //MARK: - Actions
     @IBAction func addButtonTapped(_ sender: UIButton) {
-    setUpAlertController()
+        setUpAlertController()
     }
     
     @IBAction func menuButtonTapped(_ sender: UIBarButtonItem) {
@@ -71,7 +73,7 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureFetchedResultsController()
+//        configureFetchedResultsController()
         setUpDelegates()
         sideMenuWidthConstraint.constant = 0
     }
@@ -88,50 +90,53 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     
     //MARK: - TableView Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fetchedResultsController.fetchedObjects?.count ?? 0
+//        return fetchedResultsController.fetchedObjects?.count ?? 0
+        let monthlyTaskEntries = MonthlyTaskEntryController.shared.monthlyTaskEntries.count
+        return (monthlyTaskEntries > 0) ? monthlyTaskEntries : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "monthlyTaskCell", for: indexPath) as? MonthlyTaskTableViewCell else { return MonthlyTaskTableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "monthlyTaskCell", for: indexPath) as? MonthlyTaskTableViewCell else { return UITableViewCell () }
         
-        guard let monthlyTaskEntries = fetchedResultsController.fetchedObjects else { return cell }
-        
-        let monthlyTaskEntry = monthlyTaskEntries[indexPath.row]
-        cell.monthlyTaskEntry = monthlyTaskEntry
-        
+//        guard let monthlyTaskEntries = fetchedResultsController.fetchedObjects else { return cell }
+//
+//        let monthlyTaskEntry = monthlyTaskEntries[indexPath.row]
+//        cell.monthlyTaskEntry = monthlyTaskEntry
+
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            guard let monthlyTaskEntries = fetchedResultsController.fetchedObjects else { return }
-            
-            let monthlyTaskEntry = monthlyTaskEntries[indexPath.row]
+//            guard let monthlyTaskEntries = fetchedResultsController.fetchedObjects else { return }
+//
+            let monthlyTaskEntry = MonthlyTaskEntryController.shared.monthlyTaskEntries[indexPath.row]
             MonthlyTaskEntryController.shared.delete(monthlyTaskEntry: monthlyTaskEntry)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
-    //MARK: - NSFetchedResultsControllerDelegate
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
-                    didChange anObject: Any,
-                    at indexPath: IndexPath?,
-                    for type: NSFetchedResultsChangeType,
-                    newIndexPath: IndexPath?) {
-        switch type {
-        case .insert:
-            guard let newIndexPath = newIndexPath else { return }
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
-        case .delete:
-            guard let indexPath = indexPath else { return }
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        case .move:
-            tableView.reloadData()
-        case .update:
-            guard let indexPath = indexPath else { return }
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-        }
-    }
+//    //MARK: - NSFetchedResultsControllerDelegate
+//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
+//                    didChange anObject: Any,
+//                    at indexPath: IndexPath?,
+//                    for type: NSFetchedResultsChangeType,
+//                    newIndexPath: IndexPath?) {
+//        switch type {
+//        case .insert:
+//            guard let newIndexPath = newIndexPath else { return }
+//            tableView.insertRows(at: [newIndexPath], with: .automatic)
+//        case .delete:
+//            guard let indexPath = indexPath else { return }
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//        case .move:
+//            tableView.reloadData()
+//        case .update:
+//            guard let indexPath = indexPath else { return }
+//            tableView.reloadRows(at: [indexPath], with: .automatic)
+//        }
+//    }
     
     //MARK: - Alert Controller
     func setUpAlertController(){
@@ -153,6 +158,10 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
             (_) in
             guard let monthlyTaskEntry = monthlyTaskTextField?.text else { return }
             MonthlyTaskEntryController.shared.createMonthlyTaskEntryWith(name: (monthlyTaskTextField?.text)!, bulletType: "●")
+            let monthlyTaskEntries = MonthlyTaskEntryController.shared.monthlyTaskEntries.count
+            self.tableView.beginUpdates()
+            self.tableView.insertRows(at: [IndexPath.init(row: monthlyTaskEntries - 1, section: 0)], with: .automatic)
+            self.tableView.endUpdates()
         }
         
         alertController.addAction(cancelAction)

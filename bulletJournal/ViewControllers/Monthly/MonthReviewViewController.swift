@@ -15,7 +15,17 @@ class MonthReviewViewController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var sideMenuWidthConstraint: NSLayoutConstraint!
-    
+    @IBOutlet weak var monthInReviewLabel: UILabel!
+
+    //MARK: - Date Formatting
+    func setUpMonthReviewLabel() {
+        let currentDate = Date(timeInterval: 0, since: Date())
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM"
+        let thisMonth = formatter.string(from: currentDate)
+        monthInReviewLabel.text = "\(thisMonth) in Review"
+    }
+
     //MARK: - Actions
     @IBAction func menuButtonTapped(_ sender: UIBarButtonItem) {
         if isSlideMenuHidden {
@@ -33,9 +43,11 @@ class MonthReviewViewController: UIViewController {
         isSlideMenuHidden = !isSlideMenuHidden
     }
     
+    //MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenuWidthConstraint.constant = 0
+        setUpMonthReviewLabel()
     }
 
     override func viewDidDisappear(_ animated: Bool) {
