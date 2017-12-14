@@ -14,10 +14,6 @@ class TaskEntry: Equatable {
     //MARK: - Properties
     var name: String
     var bulletType: String
-    
-    self.name = name
-    self.bulletType = bulletType
-    
     var recordID: CKRecordID
     
     init(name: String, bulletType: String) {
@@ -30,7 +26,8 @@ class TaskEntry: Equatable {
     var cloudKitRecord: CKRecord {
         let record = CKRecord(recordType: Keys.recordTaskEntryType, recordID: recordID)
         
-        record.setValue(name, forKey: Keys.taskEntryNameKey, bulletType, forKey: Keys.taskEntryBulletTypeKey)
+        record.setValue(name, forKey: Keys.taskEntryNameKey)
+        record.setValue(bulletType, forKey: Keys.taskEntryBulletTypeKey)
         
         return record
     }

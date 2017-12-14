@@ -14,10 +14,6 @@ class MonthlyTaskEntry: Equatable {
     //MARK: - Properties
     var name: String
     var bulletType: String
-    
-        self.name = name
-        self.bulletType = bulletType
-    
     var recordID: CKRecordID
     
     init(name: String, bulletType: String) {

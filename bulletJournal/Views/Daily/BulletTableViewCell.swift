@@ -30,7 +30,7 @@ class BulletTableViewCell: UITableViewCell {
         }
     }
     
-    var eventEntry: EventEntry? {
+    var eventEntry: ThoughtEntry? {
         didSet {
             updateEventEntryViews()
         }

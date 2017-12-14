@@ -16,7 +16,7 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var thoughtEntry: ThoughtEntry?
     var taskEntry: TaskEntry?
-    var eventEntry: EventEntry?
+    var eventEntry: ThoughtEntry?
     var dailyScheduleEntry: DailyScheduleEntry?
     
     var thoughtEntries = ThoughtEntryController.shared.thoughtEntries.count

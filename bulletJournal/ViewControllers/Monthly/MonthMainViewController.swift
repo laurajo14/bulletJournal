@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import CoreData
 
 class MonthMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    ///EVERYTHING HERE SHOULD BE MONTHLY EVENT NOT!!!! MONTHLY TASK
     //MARK: - Properties
     var isSlideMenuHidden = true
     
@@ -63,7 +63,7 @@ class MonthMainViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidDisappear(false)
         sideMenuWidthConstraint.constant = 0
     }
-
+    
     //MARK: - Date Formatting
     func setUpMonthLabel() {
         let currentDate = Date(timeInterval: 0, since: Date())

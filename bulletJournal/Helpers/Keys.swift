@@ -28,24 +28,34 @@ struct Keys {
     static let taskEntryNameKey = "name"
     static let taskEntryBulletTypeKey = "bulletType"
 
+    
     ///MARK: - WEEKLY MODELS
     //weeklyEntry Model Keys
-    var goals: String
-    var plans: String
-    var weeklyReviewEntry: String
-    var weeklyJournalEntry: String
+    static let recordWeeklyEntryType = "WeeklyEntry"
+
+    static let weeklyGoalEntryKey = "weeklyGoalEntry"
+    static let weeklyPlanEntryKey = "weeklyPlanEntry"
+    static let weeklyReviewEntryKey = "weeklyReviewEntry"
+    static let weeklyJournalEntryKey = "weeklyJournalEntry"
     
     //weeklyEventEntry Model Keys
-    
-    //weeklyTaskEntry Model Keys
+    static let recordWeeklyEventEntryType = "WeeklyEventEntry"
+    static let weeklyEventEntryNameKey = "name"
 
+    //weeklyTaskEntry Model Keys
+    static let recordWeeklyTaskEntryType = "WeeklyTaskEntry"
+    static let taskWeeklyEntryNameKey = "name"
+    static let taskWeeklyEntryBulletTypeKey = "bulletType"
+    
     
     ///MARK: - MONTHLY MODELS
     //monthlyEntry Model Keys
-    var monthlyVision: String
-    var monthlyGoals: String
-    var monthlyReviewEntry: String
-    var monthlyJournalEntry: String
+    static let recordMonthlyEntryType = "MonthlyEntry"
+    
+    static let monthlyVisionEntryKey = "monthlyVisionEntry"
+    static let monthlyGoalEntryKey = "monthlyGoalEntry"
+    static let monthlyReviewEntryKey = "monthlyReviewEntry"
+    static let monthlyJournalEntryKey = "monthlyJournalEntry"
     
     //monthlyTaskEntry Model Keys
     static let recordMonthlyTaskEntryType = "monthlyTaskEntry"
@@ -54,7 +64,9 @@ struct Keys {
     
     ///MARK: YEARLY MODELS
     //yearlyEntry Model Keys
-    var yearlyResolves: String
-    var yearlyReviewEntry: String
-    var yearlyJournalEntry: String
+    static let recordYearlyEntryType = "YearlyEntry"
+
+    static let yearlyResolvesKey = "yearlyResolves"
+    static let yearlyReviewEntryKey = "yearlyReviewEntry"
+    static let yearlyJournalEntryKey = "yearlyJournalEntry"
 }

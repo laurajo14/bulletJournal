@@ -7,48 +7,102 @@
 //
 
 import Foundation
-import CoreData
+import CloudKit
 
 class TaskEntryController {
     
     static let shared = TaskEntryController()
     
+    //MARK: - Properties
+    let cloudKitManager: CloudKitManager
+    let privateDatabase = CKContainer.default().privateCloudDatabase
+    
     //MARK: - Source of Truth
-    var taskEntries: [TaskEntry] = []
-
-    init(){
-        taskEntries = fetchTaskEntry()
-    }
-    
-    private func fetchTaskEntry() -> [TaskEntry] {
-        let request: NSFetchRequest<TaskEntry> = TaskEntry.fetchRequest()
-        return (try? CoreDataStack.context.fetch(request)) ?? []
-    }
-    //MARK: - Functions
-    func createTaskEntryWith(name: String) {
-        let taskEntry = TaskEntry(name: name)
-        taskEntries.append(taskEntry)
-        
-        saveToPersistentStore()
-    }
-
-    func delete(taskEntry: TaskEntry) {
-        guard let moc = taskEntry.managedObjectContext else { return }
-        moc.delete(taskEntry)
-        taskEntries = fetchTaskEntry()
-        
-        saveToPersistentStore()
-    }
-    
-    //Save
-    func saveToPersistentStore() {
-        let moc = CoreDataStack.context
-        do {
-            try moc.save()
-        } catch let error {
-            print("There was a problem saving to the persistent store: error \(error).")
+    var taskEntries: [TaskEntry] = [] {
+        didSet {
+            NotificationCenter.default.post(name: Notifications.taskEntryWasUpdatedNotification, object: nil)
         }
     }
     
+    init() {
+        self.cloudKitManager = CloudKitManager()
+    }
+    
+    //MARK: - Functions
+    //CREATE
+    func createTaskEntryWith(name: String, bulletType: String) {
+        TaskEntry(name: name, bulletType: bulletType)
+        
+        let taskEntry = TaskEntry(name: name, bulletType: bulletType)
+        taskEntries.append(taskEntry)
+        
+        cloudKitManager.saveRecord(taskEntry.cloudKitRecord) { (record, error) in
+            
+            if let error = error {
+                print("Error saving Monthly Task Entry to cloudKit: \(error.localizedDescription) in file: \(#file)")
+                return
+            }
+            return
+        }
+    }
+    
+    //UPDATE
+    func updateTaskEntryWith(taskEntry: TaskEntry, name: String, bulletType: String, completion: @escaping (TaskEntry?) -> Void) {
+        
+        taskEntry.name = name
+        taskEntry.bulletType = bulletType
+        
+        cloudKitManager.modifyRecords([taskEntry.cloudKitRecord], perRecordCompletion: nil) { (records, error) in
+            
+            if let error = error {
+                print("Error saving new Task Entry: \(error.localizedDescription) in file: \(#file)")
+                completion(nil)
+                return
+            }
+            
+            // Update the first Account
+            guard let record = records?.first else {return}
+            let updatedTaskEntry = TaskEntry(cloudKitRecord: record)
+            completion(updatedTaskEntry)
+        }
+        
+    }
+    
+    //DELETE
+    func delete(taskEntry: TaskEntry) {
+        
+        cloudKitManager.deleteRecordWithID(taskEntry.recordID) { (recordID, error) in
+            
+            if let error = error {
+                print("Error deleting Task Entry: \(error.localizedDescription) in file: \(#file)")
+                return
+            }
+        }
+    }
+    
+    // MARK: - Fetch Data from CloudKit
+    func fetchTaskEntriesFromCloudKit() {
+        
+        // Get all of the accounts
+        let predicate = NSPredicate(value: true)
+        
+        // Create a query
+        let query = CKQuery(recordType: Keys.recordTaskEntryType, predicate: predicate)
+        
+        // Fetch the data form cloudkit
+        privateDatabase.perform(query, inZoneWith: nil) { (records, error) in
+            
+            // Check for an errror
+            if let error = error {
+                print("Error fetching the Task Entries Data: \(error.localizedDescription) in file: \(#file)")
+            }
+            
+            guard let records = records else {return}
+            
+            // Send the accounts through the cloudKit Initializer
+            let taskEntry = records.flatMap( {TaskEntry(cloudKitRecord: $0)})
+            
+            self.taskEntries = taskEntry
+        }
+    }
 }
-

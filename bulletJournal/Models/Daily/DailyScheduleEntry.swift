@@ -13,9 +13,6 @@ class DailyScheduleEntry: Equatable {
     
     //MARK: - Properties
     var name: String
-    
-    self.name = name
-    
     var recordID: CKRecordID
     
     init(name: String) {

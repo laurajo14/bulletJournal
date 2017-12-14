@@ -17,27 +17,6 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     
     var monthlyTaskEntries = MonthlyTaskEntryController.shared.monthlyTaskEntries.count
     
-    //FetchedResultsController
-    var fetchedResultsController: NSFetchedResultsController<MonthlyTaskEntry>?
-    
-    func configureFetchedResultsController() {
-        if fetchedResultsController == nil {
-            let fetchRequest: NSFetchRequest<MonthlyTaskEntry> =
-                MonthlyTaskEntry.fetchRequest()
-            fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-//>>
-            let frc = NSFetchedResultsController<MonthlyTaskEntry>(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: "bulletType", cacheName: nil)
-            
-            fetchedResultsController = frc
-//            frc.delegate = self
-        }
-        do {
-            try fetchedResultsController?.performFetch()
-        } catch {
-            NSLog("Error starting fetched results controller: error \(error)")
-        }
-    }
-    
     //MARK: - Outlets
     @IBOutlet weak var sideMenuWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
@@ -73,11 +52,15 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configureFetchedResultsController()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: Notifications.monthlyTaskWasUpdatedNotification, object: nil)
         setUpDelegates()
         sideMenuWidthConstraint.constant = 0
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setUpTableView()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         self.tableView.reloadData()
@@ -86,6 +69,19 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(false)
         sideMenuWidthConstraint.constant = 0
+    }
+    
+    @objc func reloadTableView() {
+        DispatchQueue.main.async {
+            self.setUpTableView()
+        }
+    }
+    
+    //MARK: - UI SetUp
+    /// This function is run when the view first loads
+    func setUpTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
     }
     
     //MARK: - TableView Data Source
@@ -98,10 +94,11 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "monthlyTaskCell", for: indexPath) as? MonthlyTaskTableViewCell else { return UITableViewCell () }
         
-//        guard let monthlyTaskEntries = fetchedResultsController.fetchedObjects else { return cell }
-//
-//        let monthlyTaskEntry = monthlyTaskEntries[indexPath.row]
-//        cell.monthlyTaskEntry = monthlyTaskEntry
+//        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//            return MonthlyTaskEntryController.shared.return
+//                .shared.returnDictionary(fromArray: filteredTransactions)[section].1.count
+//        }
+        
 
         return cell
     }
@@ -109,35 +106,12 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-//            guard let monthlyTaskEntries = fetchedResultsController.fetchedObjects else { return }
-//
             let monthlyTaskEntry = MonthlyTaskEntryController.shared.monthlyTaskEntries[indexPath.row]
             MonthlyTaskEntryController.shared.delete(monthlyTaskEntry: monthlyTaskEntry)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
-//    //MARK: - NSFetchedResultsControllerDelegate
-//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
-//                    didChange anObject: Any,
-//                    at indexPath: IndexPath?,
-//                    for type: NSFetchedResultsChangeType,
-//                    newIndexPath: IndexPath?) {
-//        switch type {
-//        case .insert:
-//            guard let newIndexPath = newIndexPath else { return }
-//            tableView.insertRows(at: [newIndexPath], with: .automatic)
-//        case .delete:
-//            guard let indexPath = indexPath else { return }
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//        case .move:
-//            tableView.reloadData()
-//        case .update:
-//            guard let indexPath = indexPath else { return }
-//            tableView.reloadRows(at: [indexPath], with: .automatic)
-//        }
-//    }
-    
+        
     //MARK: - Alert Controller
     func setUpAlertController(){
         
