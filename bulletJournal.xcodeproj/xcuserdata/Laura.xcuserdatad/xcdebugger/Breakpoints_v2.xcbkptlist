@@ -10,73 +10,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "bulletJournal/ViewControllers/Daily/DailyViewController.swift"
-            timestampString = "534877967.241684"
+            timestampString = "535070225.281815"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "DailyViewController"
-            landmarkType = "3">
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "DailyScheduleTableViewCellTextFieldDidEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "bulletJournal/ViewControllers/Daily/DailyViewController.swift"
+            timestampString = "535070225.282064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "DailyScheduleTableViewCellTextFieldDidEndEditing(_:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "bulletJournal.DailyViewController.fetchedResultsController.getter : Swift.Optional&lt;__ObjC.NSFetchedResultsController&lt;bulletJournal.DailyScheduleEntry&gt;&gt;"
+                  symbolName = "bulletJournal.DailyViewController.DailyScheduleTableViewCellTextFieldDidEndEditing(bulletJournal.DailyScheduleTableViewCell) -&gt; ()"
                   moduleName = "bulletJournal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Desktop/AppsInProgress/bulletJournal/bulletJournal/ViewControllers/Daily/DailyViewController.swift"
-                  timestampString = "534704372.707951"
+                  timestampString = "535070225.533911"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "104">
+                  startingLineNumber = "269"
+                  endingLineNumber = "269"
+                  offsetFromSymbolStart = "976">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "bulletJournal.DailyViewController.fetchedResultsController.setter : Swift.Optional&lt;__ObjC.NSFetchedResultsController&lt;bulletJournal.DailyScheduleEntry&gt;&gt;"
+                  symbolName = "bulletJournal.DailyViewController.DailyScheduleTableViewCellTextFieldDidEndEditing(bulletJournal.DailyScheduleTableViewCell) -&gt; ()"
                   moduleName = "bulletJournal"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/user/Desktop/AppsInProgress/bulletJournal/bulletJournal/ViewControllers/Daily/DailyViewController.swift"
-                  timestampString = "534704372.710018"
+                  timestampString = "535070225.538126"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "120">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "bulletJournal.DailyViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; bulletJournal.DailyViewController"
-                  moduleName = "bulletJournal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/AppsInProgress/bulletJournal/bulletJournal/ViewControllers/Daily/DailyViewController.swift"
-                  timestampString = "534704372.712043"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "2076">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "bulletJournal.DailyViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;bulletJournal.DailyViewController&gt;"
-                  moduleName = "bulletJournal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/AppsInProgress/bulletJournal/bulletJournal/ViewControllers/Daily/DailyViewController.swift"
-                  timestampString = "534704372.713987"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "2032">
+                  startingLineNumber = "269"
+                  endingLineNumber = "269"
+                  offsetFromSymbolStart = "1468">
                </Location>
             </Locations>
          </BreakpointContent>

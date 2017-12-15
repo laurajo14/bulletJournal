@@ -44,8 +44,8 @@ struct Keys {
 
     //weeklyTaskEntry Model Keys
     static let recordWeeklyTaskEntryType = "WeeklyTaskEntry"
-    static let taskWeeklyEntryNameKey = "name"
-    static let taskWeeklyEntryBulletTypeKey = "bulletType"
+    static let weeklyTaskEntryNameKey = "name"
+    static let weeklyTaskEntryBulletTypeKey = "bulletType"
     
     
     ///MARK: - MONTHLY MODELS

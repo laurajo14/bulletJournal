@@ -15,7 +15,7 @@ class MonthlyTaskTableViewCell: UITableViewCell {
     @IBOutlet weak var taskTextView: UITextView!
 
     //MARK: - Properties
-    var monthlyTaskEntry: MonthlyTaskEntry? {
+    var monthlyTaskEntries: MonthlyTaskEntry? {
         didSet {
             updateViews()
         }
@@ -23,9 +23,9 @@ class MonthlyTaskTableViewCell: UITableViewCell {
     
     //Actions
     func updateViews(){
-        guard let monthlyTaskEntry = monthlyTaskEntry else { return }
-        taskTextView.text = monthlyTaskEntry.name
-        bulletButton.titleLabel?.text = "●"
+        guard let monthlyTaskEntries = monthlyTaskEntries else { return }
+        taskTextView.text = monthlyTaskEntries.name
+        bulletButton.titleLabel?.text = monthlyTaskEntries.bulletType
     }
     
 }

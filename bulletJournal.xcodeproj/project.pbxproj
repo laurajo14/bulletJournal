@@ -39,8 +39,12 @@
 		D3AFE5BC1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AFE5BB1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift */; };
 		D3C0A2301FD9AEA200F93361 /* DailyScheduleEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry.swift */; };
 		D3C0A2321FD9B0D800F93361 /* DailyScheduleEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C0A2311FD9B0D800F93361 /* DailyScheduleEntryController.swift */; };
+		D3CCFFE71FE432EB007A407B /* WeeklyEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CCFFE61FE432EB007A407B /* WeeklyEntryController.swift */; };
 		D3E1DDE51FE2065900DC6B85 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1DDE41FE2065900DC6B85 /* Globals.swift */; };
 		D3E1DDEA1FE2DFF400DC6B85 /* WeeklyEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1DDE91FE2DFF400DC6B85 /* WeeklyEntry.swift */; };
+		D3E1DDF01FE319C500DC6B85 /* WeeklyTaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1DDEF1FE319C500DC6B85 /* WeeklyTaskTableViewCell.swift */; };
+		D3E1DDF21FE31A5100DC6B85 /* WeeklyTaskEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1DDF11FE31A5100DC6B85 /* WeeklyTaskEntry.swift */; };
+		D3E1DDF41FE31EDD00DC6B85 /* WeeklyTaskEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1DDF31FE31EDD00DC6B85 /* WeeklyTaskEntryController.swift */; };
 		D3E87B541FD8579800A34688 /* ThoughtEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B531FD8579800A34688 /* ThoughtEntryController.swift */; };
 		D3E87B561FD857AF00A34688 /* ThoughtEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B551FD857AF00A34688 /* ThoughtEntry.swift */; };
 		D3E87B5A1FD8598100A34688 /* EventEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E87B591FD8598100A34688 /* EventEntry.swift */; };
@@ -88,8 +92,12 @@
 		D3AFE5BB1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyEventTableViewCell.swift; sourceTree = "<group>"; };
 		D3C0A22F1FD9AEA200F93361 /* DailyScheduleEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleEntry.swift; sourceTree = "<group>"; };
 		D3C0A2311FD9B0D800F93361 /* DailyScheduleEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScheduleEntryController.swift; sourceTree = "<group>"; };
+		D3CCFFE61FE432EB007A407B /* WeeklyEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyEntryController.swift; sourceTree = "<group>"; };
 		D3E1DDE41FE2065900DC6B85 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		D3E1DDE91FE2DFF400DC6B85 /* WeeklyEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyEntry.swift; sourceTree = "<group>"; };
+		D3E1DDEF1FE319C500DC6B85 /* WeeklyTaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTaskTableViewCell.swift; sourceTree = "<group>"; };
+		D3E1DDF11FE31A5100DC6B85 /* WeeklyTaskEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTaskEntry.swift; sourceTree = "<group>"; };
+		D3E1DDF31FE31EDD00DC6B85 /* WeeklyTaskEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTaskEntryController.swift; sourceTree = "<group>"; };
 		D3E87B531FD8579800A34688 /* ThoughtEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtEntryController.swift; sourceTree = "<group>"; };
 		D3E87B551FD857AF00A34688 /* ThoughtEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtEntry.swift; sourceTree = "<group>"; };
 		D3E87B591FD8598100A34688 /* EventEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEntry.swift; sourceTree = "<group>"; };
@@ -134,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				D310D8DB1FE1D17700E86D43 /* bulletJournal.entitlements */,
-				D330865E1FDA11DD0067C4E5 /* Helpers */,
 				D32A1AEF1FD5EE2200F1C6C7 /* Storyboards */,
+				D330865E1FDA11DD0067C4E5 /* Helpers */,
 				D3E87B511FD8576900A34688 /* Models */,
 				D3E87B521FD8577200A34688 /* Model Controllers */,
 				D35B805C1FD74AB500EA79DE /* Views */,
@@ -191,8 +199,9 @@
 		D35B805C1FD74AB500EA79DE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D3AFE5BA1FDAFB2A00B29232 /* Monthly */,
 				D35B805D1FD74AC200EA79DE /* Daily */,
+				D3E1DDEE1FE3199B00DC6B85 /* Weekly */,
+				D3AFE5BA1FDAFB2A00B29232 /* Monthly */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -286,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				D3E1DDE91FE2DFF400DC6B85 /* WeeklyEntry.swift */,
+				D3E1DDF11FE31A5100DC6B85 /* WeeklyTaskEntry.swift */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -305,6 +315,38 @@
 			path = Yearly;
 			sourceTree = "<group>";
 		};
+		D3E1DDEB1FE2EA6D00DC6B85 /* Yearly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Yearly;
+			sourceTree = "<group>";
+		};
+		D3E1DDEC1FE2EA7A00DC6B85 /* Monthly */ = {
+			isa = PBXGroup;
+			children = (
+				D37306E31FDCAB39000DF356 /* MonthlyTaskEntryController.swift */,
+			);
+			path = Monthly;
+			sourceTree = "<group>";
+		};
+		D3E1DDED1FE2EA8500DC6B85 /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+				D3E1DDF31FE31EDD00DC6B85 /* WeeklyTaskEntryController.swift */,
+				D3CCFFE61FE432EB007A407B /* WeeklyEntryController.swift */,
+			);
+			path = Weekly;
+			sourceTree = "<group>";
+		};
+		D3E1DDEE1FE3199B00DC6B85 /* Weekly */ = {
+			isa = PBXGroup;
+			children = (
+				D3E1DDEF1FE319C500DC6B85 /* WeeklyTaskTableViewCell.swift */,
+			);
+			path = Weekly;
+			sourceTree = "<group>";
+		};
 		D3E87B511FD8576900A34688 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,8 +361,10 @@
 		D3E87B521FD8577200A34688 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D37306E31FDCAB39000DF356 /* MonthlyTaskEntryController.swift */,
 				D37306E51FDCAB45000DF356 /* Daily */,
+				D3E1DDED1FE2EA8500DC6B85 /* Weekly */,
+				D3E1DDEC1FE2EA7A00DC6B85 /* Monthly */,
+				D3E1DDEB1FE2EA6D00DC6B85 /* Yearly */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -420,13 +464,17 @@
 				D310D8DF1FE1D36600E86D43 /* Keys.swift in Sources */,
 				D330865D1FDA11D40067C4E5 /* CustomSegue.swift in Sources */,
 				D3E1DDE51FE2065900DC6B85 /* Globals.swift in Sources */,
+				D3E1DDF01FE319C500DC6B85 /* WeeklyTaskTableViewCell.swift in Sources */,
 				D32A1AF31FD5EED000F1C6C7 /* WeekReviewViewController.swift in Sources */,
 				D37306E41FDCAB39000DF356 /* MonthlyTaskEntryController.swift in Sources */,
+				D3E1DDF41FE31EDD00DC6B85 /* WeeklyTaskEntryController.swift in Sources */,
+				D3E1DDF21FE31A5100DC6B85 /* WeeklyTaskEntry.swift in Sources */,
 				D37306E21FDCA9DB000DF356 /* MonthlyTaskEntry.swift in Sources */,
 				D3E87B561FD857AF00A34688 /* ThoughtEntry.swift in Sources */,
 				D3E87B601FD85A1600A34688 /* TaskEntryController.swift in Sources */,
 				D32A1B051FD5F1A200F1C6C7 /* YearJournalEntryViewController.swift in Sources */,
 				D3332D2B1FE1E7A5007F850D /* Notifications.swift in Sources */,
+				D3CCFFE71FE432EB007A407B /* WeeklyEntryController.swift in Sources */,
 				D39759F21FDB2F730076CFE4 /* MonthlyTaskTableViewCell.swift in Sources */,
 				D3E87B5C1FD8598C00A34688 /* TaskEntry.swift in Sources */,
 				D3AFE5BC1FDAFE7500B29232 /* MonthlyEventTableViewCell.swift in Sources */,

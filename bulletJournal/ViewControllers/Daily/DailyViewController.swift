@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DailyScheduleTableViewCellDelegate, BulletTableViewCellDelegate, UITextFieldDelegate {
     
@@ -24,25 +23,6 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var eventEntries = EventEntryController.shared.eventEntries.count
     
     let hours: [String] = ["6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00 PM", "1:00", "2:00", "3:00", "4:00", "5:00", "6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00 AM", "1:00", "2:00", "3:00", "4:00", "5:00"]
-    
-    //MARK: - FetchedResultsController
-    var fetchedResultsController: NSFetchedResultsController<DailyScheduleEntry>?
-
-    func configureFetchedResultsController() {
-        if fetchedResultsController == nil {
-            let fetchRequest: NSFetchRequest<DailyScheduleEntry> =
-                DailyScheduleEntry.fetchRequest()
-            let frc = NSFetchedResultsController<DailyScheduleEntry>(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: nil, cacheName: nil)
-            /*(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.context, sectionNameKeyPath: "name", cacheName: nil)*/
-            frc.delegate = self as? NSFetchedResultsControllerDelegate
-            fetchedResultsController = frc
-        }
-        do {
-            try fetchedResultsController?.performFetch()
-        } catch {
-            NSLog("Error starting fetched results controller: error \(error)")
-        }
-    }
     
     //MARK: - Outlets
     @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
@@ -86,15 +66,24 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: Notifications.monthlyTaskWasUpdatedNotification, object: nil)
+        tableView.reloadData()
         setDelegates()
         setUpDateLabels()
         sideMenuConstraint.constant = -180
+//        textField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.bulletTableView.reloadData()
         self.tableView.reloadData()
+    }
+    
+    @objc func reloadTableView() {
+        DispatchQueue.main.async {
+            self.setDelegates()
+        }
     }
     
     //MARK: - Date Label
@@ -163,17 +152,28 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             cell.delegate = self
             
+                switch indexPath.section {
+                case 0:
+                    let thoughtEntry = ThoughtEntryController.shared.thoughtEntries[indexPath.row]
+                    cell.thoughtEntries = thoughtEntry
+                case 1:
+                    let taskEntry = TaskEntryController.shared.taskEntries[indexPath.row]
+                    cell.taskEntries = taskEntry
+                case 2:
+                    let eventEntry = EventEntryController.shared.eventEntries[indexPath.row]
+                    cell.eventEntries = eventEntry
+                default:
+                    break
+                }
             return cell
             
         } else {
             
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "dailyScheduleCell", for: indexPath) as? DailyScheduleTableViewCell else { return UITableViewCell() }
             
-            cell.timeLabel.text = self.hours[indexPath.row]
-            ///how does it know to save to that specific row?
-            cell.dailyScheduleEntryTF.text = dailyScheduleEntry?.name
-            
             cell.delegate = self
+            cell.timeLabel.text = self.hours[indexPath.row]
+            cell.dailyScheduleEntryTF.text = dailyScheduleEntry?.name
             
             return cell
         }
@@ -196,11 +196,12 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 default:
                     break
                 }
-                
                 self.bulletTableView.deleteRows(at: [indexPath], with: .fade)
             }
-            
+//        } else if tableView == tableView {
+//            editingStyle == .none
         } else {
+        
             return
         }
     }
@@ -227,7 +228,7 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let addTaskEntryAction = UIAlertAction(title: "Task", style: .default) {
             (_) in
-            TaskEntryController.shared.createTaskEntryWith(name: "task entry")
+            TaskEntryController.shared.createTaskEntryWith(name: "taskEntry", bulletType: "bulletType")
             let taskEntries = TaskEntryController.shared.taskEntries.count
             self.bulletTableView.beginUpdates()
             self.bulletTableView.insertRows(at: [IndexPath.init(row: taskEntries - 1, section: 1)], with: .automatic)
@@ -253,29 +254,35 @@ class DailyViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    //MARK: - DailyScheduleTableViewCell Delegate
+    //MARK: - Delegate
+  func bulletTableViewCellnoteTFDidEndEditing(_ cell: BulletTableViewCell) {
+//        guard let indexPath = tableView.indexPath(for: cell),
+//            let item = fetchedResultsController.fetchedObjects?[indexPath.row] else { return }
+//
+    }
+
     func DailyScheduleTableViewCellTextFieldDidEndEditing(_ cell: DailyScheduleTableViewCell) {
         
-//        guard let indexPath = tableView.indexPath(for: cell),
-//            let dailyScheduleEntry = fetchedResultsController?.fetchedObjects?[indexPath.row]
-//            else { return }
-
-//        var dailyScheduleEntryTF: UITextField?
-//        guard let dailyScheduleEntry.name = dailyScheduleEntryTF?.text else { return }
-//        DailyScheduleEntryController.shared.createDailyScheduleEntryWith(name: dailyScheduleEntryTF.text))
-//        }
-        DailyScheduleEntryController.shared.saveToPersistentStore()
+        guard let indexPath = tableView.indexPath(for: cell),
+            let cell = tableView.dequeueReusableCell(withIdentifier: "dailyScheduleCell", for: indexPath) as? DailyScheduleTableViewCell
+            else { return }
+        DailyScheduleEntryController.shared.createDailyScheduleEntryWith(name: (cell.dailyScheduleEntryTF?.text)!)
     }
 }
 
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
- // Get the new view controller using segue.destinationViewController.
- // Pass the selected object to the new view controller.
- }
- */
+//MARK: - Navigation
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    if segue.identifier == "toShowEntry" {
+        
+        if let detailViewController = segue.destination as? EntryDetailViewController,
+            let selectedRow = tableView.indexPathForSelectedRow?.row {
+            
+            let entry = EntryController.shared.entries[selectedRow]
+            detailViewController.entry = entry
+        }
+    }
+}
 
 

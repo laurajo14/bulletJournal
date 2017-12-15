@@ -8,55 +8,49 @@
 
 import UIKit
 
-protocol BulletTableViewCellDelegate: class {    
+protocol BulletTableViewCellDelegate: class {
+    func bulletTableViewCellnoteTFDidEndEditing(_ cell: BulletTableViewCell)
 }
 
 class BulletTableViewCell: UITableViewCell {
 
     //MARK: - Outlets
     @IBOutlet weak var bulletButton: UIButton!
-    @IBOutlet weak var noteTextView: UITextView!
-    
-    //MARK: - Actions
-    
+    @IBOutlet weak var noteTextField: UITextField!
     
     //MARK: - Properties
-    //    var bulletTypes = ["●", "x", ">>"]
-    //    var bulletTypes = ["1", "2", "3"]
-
-    var thoughtEntry: ThoughtEntry? {
+    var thoughtEntries: ThoughtEntry? {
         didSet {
             updateThoughtEntryViews()
         }
     }
     
-    var eventEntry: ThoughtEntry? {
+    var eventEntries: EventEntry? {
         didSet {
             updateEventEntryViews()
         }
     }
     
-    var taskEntry: TaskEntry?
-    
+    var taskEntries: TaskEntry?
     
     weak var delegate: BulletTableViewCellDelegate?
     
-    //Actions
+    //MARK: - Actions
     func updateThoughtEntryViews(){
-        guard let thoughtEntry = thoughtEntry else { return }
-        noteTextView.text = thoughtEntry.name
+        guard let thoughtEntry = thoughtEntries else { return }
+        noteTextField.text = thoughtEntry.name
         bulletButton.titleLabel?.text = "-"
     }
     
     func updateEventEntryViews(){
-        guard let eventEntry = eventEntry else { return }
-        noteTextView.text = eventEntry.name
+        guard let eventEntry = eventEntries else { return }
+        noteTextField.text = eventEntry.name
         bulletButton.titleLabel?.text = "○"
     }
     
-    
-    
-    
+    @IBAction func bulletCellDidEndEditing(_ sender: UITextField) {
+        delegate?.bulletTableViewCellnoteTFDidEndEditing(self)
+    }
     
 ///>>setting task bullet status as normal, complete, or migrate
 //        if taskEntry.normalStatus == true {

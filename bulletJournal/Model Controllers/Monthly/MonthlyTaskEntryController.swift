@@ -37,7 +37,6 @@ class MonthlyTaskEntryController {
         monthlyTaskEntries.append(monthlyTaskEntry)
         
         cloudKitManager.saveRecord(monthlyTaskEntry.cloudKitRecord) { (record, error) in
-            
             if let error = error {
                 print("Error saving Monthly Task Entry to cloudKit: \(error.localizedDescription) in file: \(#file)")
                 return
@@ -79,7 +78,7 @@ class MonthlyTaskEntryController {
             }
         }
     }
-
+    
     // MARK: - Fetch Data from CloudKit
     func fetchMonthlyTaskEntriesFromCloudKit() {
         
@@ -105,4 +104,22 @@ class MonthlyTaskEntryController {
             self.monthlyTaskEntries = monthlyTaskEntry
         }
     }
+    
+    /// This function takes an input of array of Transactions and returns a ordered dictionary of transactions key value pairs of the date/month of the transaction as the key and an array of transactions as the value
+    //    func returnDictionary(fromArray array: [Transaction]) -> [(key: Date, value: [Transaction])] {
+    //
+    //        var dictionary: [(key: Date, value: [Transaction])]?
+    //        let dictionaryOfArray = Dictionary(grouping:array){ $0.monthYearDate}
+    //        let sortedArray = dictionaryOfArray.sorted(by: { $0.0 > $1.0 })
+    //        dictionary = sortedArray
+    //        guard let finalDictionary = dictionary else { return [] }
+    //        return finalDictionary
+    //    }
+    //
+    //    func monthYearTuple(fromDate date: Date) -> (Int, Int) {
+    //        let month = Calendar.current.component(.month, from: Date())
+    //        let year = Calendar.current.component(.year, from: Date())
+    //        return (month, year)
+    //    }
+    
 }

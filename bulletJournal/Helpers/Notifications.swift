@@ -19,6 +19,8 @@ struct Notifications {
     static let taskEntryWasUpdatedNotification = Notification.Name("taskEntryWasUpdated")
 
     //Weekly
+    static let weeklyTaskWasUpdatedNotification = Notification.Name("weeklyTaskWasUpdated")
+    static let weeklyEntryWasUpdatedNotification = Notification.Name("weeklyEntryWasUpdated")
     
     //Monthly
     static let monthlyTaskWasUpdatedNotification = Notification.Name("monthlyTaskWasUpdated")

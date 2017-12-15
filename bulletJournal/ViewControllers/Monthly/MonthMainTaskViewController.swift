@@ -7,15 +7,11 @@
 //
 
 import UIKit
-import CoreData
 
-class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
+class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Properties
     var isSlideMenuHidden = true
-    var monthlyTaskEntry: MonthlyTaskEntry?
-    
-    var monthlyTaskEntries = MonthlyTaskEntryController.shared.monthlyTaskEntries.count
     
     //MARK: - Outlets
     @IBOutlet weak var sideMenuWidthConstraint: NSLayoutConstraint!
@@ -42,27 +38,18 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
         isSlideMenuHidden = !isSlideMenuHidden
     }
     
-    //MARK: - TableViewFunctions
-    func setUpDelegates() {
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-    
-    
     //MARK: - View Lifecycles
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: Notifications.monthlyTaskWasUpdatedNotification, object: nil)
-        setUpDelegates()
-        sideMenuWidthConstraint.constant = 0
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
         setUpTableView()
+        sideMenuWidthConstraint.constant = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
+        setUpTableView()
         self.tableView.reloadData()
     }
     
@@ -85,21 +72,25 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     //MARK: - TableView Data Source
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return fetchedResultsController.fetchedObjects?.count ?? 0
         let monthlyTaskEntries = MonthlyTaskEntryController.shared.monthlyTaskEntries.count
         return (monthlyTaskEntries > 0) ? monthlyTaskEntries : 0
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "monthlyTaskCell", for: indexPath) as? MonthlyTaskTableViewCell else { return UITableViewCell () }
-        
-//        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//            return MonthlyTaskEntryController.shared.return
-//                .shared.returnDictionary(fromArray: filteredTransactions)[section].1.count
-//        }
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "monthlyTaskCell", for: indexPath) as? MonthlyTaskTableViewCell else {
+            return UITableViewCell ()
+            
+        }
 
+        let monthlyTaskEntry = MonthlyTaskEntryController.shared.monthlyTaskEntries[indexPath.row]
+        cell.monthlyTaskEntries = monthlyTaskEntry
+        
         return cell
     }
     
@@ -130,8 +121,8 @@ class MonthMainTaskViewController: UIViewController, UITableViewDelegate, UITabl
         
         let addMonthlyTaskEntryAction = UIAlertAction(title: "Add", style: .default) {
             (_) in
-            guard let monthlyTaskEntry = monthlyTaskTextField?.text else { return }
-            MonthlyTaskEntryController.shared.createMonthlyTaskEntryWith(name: (monthlyTaskTextField?.text)!, bulletType: "●")
+            guard let monthlyTaskEntryName = monthlyTaskTextField?.text else { return }
+            MonthlyTaskEntryController.shared.createMonthlyTaskEntryWith(name: monthlyTaskEntryName, bulletType: "-")
             let monthlyTaskEntries = MonthlyTaskEntryController.shared.monthlyTaskEntries.count
             self.tableView.beginUpdates()
             self.tableView.insertRows(at: [IndexPath.init(row: monthlyTaskEntries - 1, section: 0)], with: .automatic)

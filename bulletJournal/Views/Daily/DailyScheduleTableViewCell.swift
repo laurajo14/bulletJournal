@@ -9,7 +9,6 @@
 import UIKit
 
 protocol DailyScheduleTableViewCellDelegate: class {
-    
     func DailyScheduleTableViewCellTextFieldDidEndEditing(_ cell: DailyScheduleTableViewCell)
 }
 
